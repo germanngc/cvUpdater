@@ -1,0 +1,8 @@
+Information:
+  UserName: Alice
+  Password: star123*
+  phone: 3339025911
+  AccessKeys:
+    - EmployeeTable
+    - SoftwaresList
+    - HardwareList

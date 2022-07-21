@@ -1,0 +1,29 @@
+Information:
+  Name: Germán González
+  FullName: Germán Noé González Cuevas
+  Phone: +52 33 3902 5911
+  RoleName: DevSecOps
+  Email: germanngc@gmail.com
+  AboutMe:
+    Birthday: Jun/22/1987
+    Location: Zapopan, Jalisco, MEX.
+    Nacionality: Mexican
+    PassportExp: 2030
+    VisaExp: 2032
+  Contact:
+    Email: germanngc@gmail.com
+    Phone: +52 33 3902 5911
+  Languages:
+    Spanish: Native
+    English: Fluent
+  Skills:
+    - Leadership
+  Softwares:
+    - AWS
+    - Jenkins
+    - Docker
+    - K8s
+  AccessKeys:
+    - EmployeeTable
+    - SoftwaresList
+    - HardwareList
