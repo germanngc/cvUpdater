@@ -16,13 +16,40 @@ Information:
   Languages:
     Spanish: Native
     English: Fluent
+  Social:
+    LinkedIn: https://linkedin.com/in/germanngc/
+    Github: https://github.com/germanngc
   Skills:
-    - Leadership
-  Softwares:
-    - AWS
+    - 13 Years of Experience on IT Services
+    - ITIL v3
+    - ITSM
+    - PaaS
+    - IaaS
+    - IaC
+    - DevOps
+    - DevSecOps
+    - Support & Troubleshooting
+    - Full Stack Developer
+    - Scripting
+    - Logging
+    - Monitoring
+  Technologies:
+    - Amazon Web Services (AWS)
     - Jenkins
+    - Chef
+    - Ansible
+    - Terraform
     - Docker
     - K8s
+    - SQL
+    - MySQL
+    - NonSQL
+    - PHP
+    - JavaScript
+    - Angular
+    - NodeJS
+    - Typescrypt
+    - Python
   AccessKeys:
     - EmployeeTable
     - SoftwaresList
@@ -30,8 +57,21 @@ Information:
 Job:
   - Company: FICO
     Title: Sr DevSecOps
-    Start: Feb/2020
+    Start: Nov/2021
     End: Current
+    Location: San Jose, CA, USA
+    Description: "Moving into new challanged withtin the company, taking steps on the continuos integration and beyond, implementing security controls to move all the Development Lifecycle into the highway to production to automate and ensure the application security."
+    Activities:
+      - Continous Integration
+      - Continous Deployment
+      - Security
+      - Deployment
+      - Pieplines
+      - Documentation
+  - Company: FICO
+    Title: Sr DevOps
+    Start: Feb/2020
+    End: Nov/2021
     Location: San Jose, CA, USA
     Description: "Working in a multidisciplinary team, I’ve worked with different tools and applications, such proprietary or third-party software and core OS systems, building, maintaining and supporting with on premise infrastructure or in public cloud in AWS. Most of the tools used on the different projects include but not limited to: Bitbucket, Jira, Jboss, Puppet, Foreman, Okta, AppD, Jenkins, Thousand Eyes, AWS , Opeshift and others."
     Activities:
@@ -186,6 +226,6 @@ Recognition:
     Year: 2006
 Education:
   - Name: Bachelor Degree Engineer in Telematics
-    Insitution: Universidad de Guadalajara
+    Institution: Universidad de Guadalajara
     Location: Puerto Vallarta, JAL, México
     Year: 2009

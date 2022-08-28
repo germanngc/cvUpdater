@@ -25,8 +25,9 @@ class PDF(FPDF):
 		self.Information = cvData.get('Information', [])
 		self.AboutMe = self.Information.get('AboutMe', [])
 		self.Contact = self.Information.get('Contact', [])
+		self.Social = self.Information.get('Social', [])
 		self.Languages = self.Information.get('Languages', [])
-		self.Softwares = self.Information.get('Softwares', [])
+		self.Technologies = self.Information.get('Technologies', [])
 		self.Skills = self.Information.get('Skills', [])
 
 		self.fullName = self.Information.get('FullName', 'Missing')
@@ -62,11 +63,11 @@ class PDF(FPDF):
 		self.cell(0, 10, 'Page' + str(self.page_no()) + ' / {nb}', 0, 0, 'C')
 
 	def rightCol(self):
-		self.set_xy(80, 11)
+		self.set_xy(70, 11)
 		self.set_font('OpenSansBold', '', 16)
 		self.set_text_color(self.template_color['text'][0], self.template_color['text'][1], self.template_color['text'][2])
-		self.cell(130, 8, 'Work Experience', 0, 1, 'L', 0)
-		self.ln(12)
+		self.cell(140, 8, 'Work Experience', 0, 1, 'L', 0)
+		self.ln(8)
 
 		for item in self.Job:
 			activities = item.get('Activities', [])
@@ -77,32 +78,33 @@ class PDF(FPDF):
 			start = item.get('Start', 'Unknown')
 			title = item.get('Title', 'Unknown')
 
-			self.set_x(80)
+			self.set_x(70)
 			self.set_font('OpenSansBold', '', 10)
-			self.cell(65, 5, str(title), 0, 0, 'L')
-			self.cell(65, 5, str(company), 0, 1, 'R')
-			self.set_x(80)
-			self.set_font('OpenSans', '', 10)
-			self.cell(130, 5, str(location + ' / From ' + start + ' to ' + end), 'B', 1, 'L')
+			self.cell(70, 5, str(title), 0, 0, 'L')
+			self.cell(70, 5, str(company), 0, 1, 'R')
 			self.ln(2)
-			self.set_x(80)
+			self.set_x(70)
 			self.set_font('OpenSans', '', 10)
-			self.multi_cell(130, 5, str(description), 0, 'J')
+			self.cell(140, 5, str(location + ' / From ' + start + ' to ' + end), 'B', 1, 'L')
 			self.ln(2)
-			self.set_x(80)
+			self.set_x(70)
+			self.set_font('OpenSans', '', 10)
+			self.multi_cell(140, 5, str(description), 0, 'J')
+			self.ln(2)
+			self.set_x(70)
 			self.set_font('OpenSansBold', '', 10)
-			self.cell(18, 5, str('Activities: '), 0, 0, 'L')
+			self.cell(15, 5, str('Activities: '), 0, 0, 'L')
 			self.set_font('OpenSans', '', 10)
-			self.multi_cell(111, 5, " / ".join(activities), 0, 'J')
+			self.multi_cell(115, 5, " / ".join(activities), 0, 'J')
 			self.ln(8)
 
-		self.set_x(80)
+		self.set_x(70)
 		self.set_font('OpenSansBold', '', 16)
 		self.set_text_color(self.template_color['text'][0], self.template_color['text'][1], self.template_color['text'][2])
 		self.cell(130, 8, 'Certifications', 0, 1, 'L', 0)
-		self.ln(6)
+		self.ln(8)
 
-		self.set_x(80)
+		self.set_x(70)
 		self.set_font('OpenSansBold', '', 10)
 		self.cell(55, 5, str('Certification'), 'B', 0, 'L')
 		self.cell(55, 5, str('Insititution'), 'B', 0, 'L')
@@ -117,26 +119,26 @@ class PDF(FPDF):
 			getY = self.get_y()
 			highY = getY
 
-			self.set_xy(80, getY)
+			self.set_xy(70, getY)
 			self.multi_cell(55, 5, str(name), 0, 'L')
 			highY = highY if highY > self.get_y() else self.get_y()
-			self.set_xy(80 + 55, getY)
+			self.set_xy(70 + 55, getY)
 			self.multi_cell(55, 5, str(institution), 0, 'L')
 			highY = highY if highY > self.get_y() else self.get_y()
-			self.set_xy(80 + 55 + 55, getY)
+			self.set_xy(70 + 55 + 55, getY)
 			highY = highY if highY > self.get_y() else self.get_y()
 			self.multi_cell(20, 5, str(year), 0, 'L')
-			self.set_xy(80, highY)
+			self.set_xy(70, highY)
 			self.ln(1)
 
-		self.ln(12)
-		self.set_x(80)
+		self.ln(8)
+		self.set_x(70)
 		self.set_font('OpenSansBold', '', 16)
 		self.set_text_color(self.template_color['text'][0], self.template_color['text'][1], self.template_color['text'][2])
 		self.cell(130, 8, 'Recognitions', 0, 1, 'L', 0)
-		self.ln(6)
+		self.ln(8)
 
-		self.set_x(80)
+		self.set_x(70)
 		self.set_font('OpenSansBold', '', 10)
 		self.cell(55, 5, str('Name'), 'B', 0, 'L')
 		self.cell(55, 5, str('Insititution'), 'B', 0, 'L')
@@ -151,50 +153,38 @@ class PDF(FPDF):
 			getY = self.get_y()
 			highY = getY
 
-			self.set_xy(80, getY)
+			self.set_xy(70, getY)
 			self.multi_cell(55, 5, str(name), 0, 'L')
 			highY = highY if highY > self.get_y() else self.get_y()
-			self.set_xy(80 + 55, getY)
+			self.set_xy(70 + 55, getY)
 			self.multi_cell(55, 5, str(institution), 0, 'L')
 			highY = highY if highY > self.get_y() else self.get_y()
-			self.set_xy(80 + 55 + 55, getY)
+			self.set_xy(70 + 55 + 55, getY)
 			highY = highY if highY > self.get_y() else self.get_y()
 			self.multi_cell(20, 5, str(year), 0, 'L')
-			self.set_xy(80, highY)
+			self.set_xy(70, highY)
 			self.ln(1)
 
-		self.ln(12)
-		self.set_x(80)
+		self.ln(8)
+		self.set_x(70)
 		self.set_font('OpenSansBold', '', 16)
 		self.set_text_color(self.template_color['text'][0], self.template_color['text'][1], self.template_color['text'][2])
 		self.cell(130, 8, 'Education', 0, 1, 'L', 0)
-		self.ln(6)
-
-		self.set_x(80)
-		self.set_font('OpenSansBold', '', 10)
-		self.cell(55, 5, str('Name'), 'B', 0, 'L')
-		self.cell(55, 5, str('Insititution'), 'B', 0, 'L')
-		self.cell(20, 5, str('Year'), 'B', 1, 'L')
+		self.ln(8)
 		self.set_font('OpenSans', '', 10)
 
-		for item in self.Recognition:
+		for item in self.Education:
 			institution = item.get('Institution', 'Unknown')
+			location = item.get('Location', 'Unknown')
 			name = item.get('Name', 'Unknown')
 			year = item.get('Year', 'Unknown')
 
-			getY = self.get_y()
-			highY = getY
-
-			self.set_xy(80, getY)
-			self.multi_cell(55, 5, str(name), 0, 'L')
-			highY = highY if highY > self.get_y() else self.get_y()
-			self.set_xy(80 + 55, getY)
-			self.multi_cell(55, 5, str(institution), 0, 'L')
-			highY = highY if highY > self.get_y() else self.get_y()
-			self.set_xy(80 + 55 + 55, getY)
-			highY = highY if highY > self.get_y() else self.get_y()
-			self.multi_cell(20, 5, str(year), 0, 'L')
-			self.set_xy(80, highY)
+			self.set_x(70)
+			self.set_font('OpenSansBold', '', 10)
+			self.cell(130, 5, str(name), 0, 1, 'L')
+			self.set_x(70)
+			self.set_font('OpenSans', '', 10)
+			self.cell(130, 5, str(institution + ' / ' + location + ' / ') + str(year), 0, 1, 'L')
 			self.ln(1)
 	
 	def leftCol(self):
@@ -217,8 +207,11 @@ class PDF(FPDF):
 		# Languages Block
 		self.leftColBlock(self.Languages, 'LANGUAGES', 'table')
 
-		# Softwares Block
-		self.leftColBlock(self.Softwares, 'SOFTWARES', 'inline')
+		# Social Block
+		self.leftColBlock(self.Social, 'SOCIAL', 'table')
+
+		# Technologies Block
+		self.leftColBlock(self.Technologies, 'TECHNOLOGIES', 'inline')
 
 		# Skills Block
 		self.leftColBlock(self.Skills, 'SKILLS', 'inline')
@@ -244,7 +237,7 @@ class PDF(FPDF):
 		else:
 			self.set_x(5)
 			self.set_font('OpenSans', '', 10)
-			self.cell(60, 5, " / ".join(data), 0, 1, 'L')
+			self.multi_cell(60, 5, " / ".join(data), 0, 'J')
 
 	def separatorA(self, x):
 		self.set_draw_color(self.template_color['lines'][0], self.template_color['lines'][1], self.template_color['lines'][2])
