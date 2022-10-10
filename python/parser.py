@@ -1,3 +1,6 @@
+from datetime import date
+from datetime import datetime
+from dateutil.parser import parse
 import math
 import yaml
 
@@ -6,7 +9,7 @@ from fpdf import FPDF
 from yaml.loader import SafeLoader
 
 cvData = []
-version = '1.0.1'
+version = '2.0.0'
 
 # Open the file and load the file
 with open('cv.yaml') as f:
@@ -20,6 +23,20 @@ class PDF(FPDF):
 		"reset": [255, 255, 255],
 		"text": [80, 80, 80]
 	}
+
+	def getJobAge(self, start, end):
+		dayCheck = 0 #  (((end.month, end.day) < (start.month, start.day)))
+		yearDiff = end.year - start.year
+		ageInYears = yearDiff - dayCheck
+		remainingMonths = abs(end.month - start.month)
+
+		yearPloural = 'Year' if ageInYears == 1 else 'Years'
+		monthPloural = 'Month' if remainingMonths == 1 else 'Months'
+		
+		if ageInYears > 0:
+			return str(ageInYears) + ' ' + yearPloural + ', ' + str(remainingMonths) + ' ' + monthPloural
+		else:
+			return str(remainingMonths) + ' ' + monthPloural
 
 	def customvars(self):
 		self.Information = cvData.get('Information', [])
@@ -67,16 +84,32 @@ class PDF(FPDF):
 		self.set_font('OpenSansBold', '', 16)
 		self.set_text_color(self.template_color['text'][0], self.template_color['text'][1], self.template_color['text'][2])
 		self.cell(140, 8, 'Work Experience', 0, 1, 'L', 0)
-		self.ln(8)
+		self.ln(10)
 
 		for item in self.Job:
 			activities = item.get('Activities', [])
 			company = item.get('Company', 'Unknown')
 			description = item.get('Description', 'Unknown')
-			end = item.get('End', 'Unknown')
+			end = item.get('End', date.today())
 			location = item.get('Location', 'Unknown')
-			start = item.get('Start', 'Unknown')
+			start = item.get('Start', date.today())
 			title = item.get('Title', 'Unknown')
+
+			end = date.today() if end == 'Current' else end
+
+			try:
+				parse(end.strftime("%B/%Y"), False)
+			except ValueError:
+				end = date.today()
+			except TypeError:
+				end = date.today()
+
+			try:
+				parse(start.strftime("%B/%Y"), False)
+			except ValueError:
+				start = date.today()
+			except TypeError:
+				start = date.today()
 
 			self.set_x(70)
 			self.set_font('OpenSansBold', '', 10)
@@ -85,7 +118,8 @@ class PDF(FPDF):
 			self.ln(2)
 			self.set_x(70)
 			self.set_font('OpenSans', '', 10)
-			self.cell(140, 5, str(location + ' / From ' + start + ' to ' + end), 'B', 1, 'L')
+			self.cell(100, 5, str(location + '   /   From ' + start.strftime("%B/%Y") + ' to ' + end.strftime("%B/%Y")), 'B', 0, 'L')
+			self.cell( 40, 5, self.getJobAge(start, end), 'B', 1, 'R')
 			self.ln(2)
 			self.set_x(70)
 			self.set_font('OpenSans', '', 10)
@@ -98,6 +132,7 @@ class PDF(FPDF):
 			self.multi_cell(115, 5, " / ".join(activities), 0, 'J')
 			self.ln(8)
 
+		self.add_page()
 		self.set_x(70)
 		self.set_font('OpenSansBold', '', 16)
 		self.set_text_color(self.template_color['text'][0], self.template_color['text'][1], self.template_color['text'][2])
@@ -154,14 +189,14 @@ class PDF(FPDF):
 			highY = getY
 
 			self.set_xy(70, getY)
-			self.multi_cell(55, 5, str(name), 0, 'L')
+			self.multi_cell(55, 5, str(name) + str(highY), 0, 'L')
 			highY = highY if highY > self.get_y() else self.get_y()
 			self.set_xy(70 + 55, getY)
-			self.multi_cell(55, 5, str(institution), 0, 'L')
+			self.multi_cell(55, 5, str(institution) + str(highY), 0, 'L')
 			highY = highY if highY > self.get_y() else self.get_y()
 			self.set_xy(70 + 55 + 55, getY)
 			highY = highY if highY > self.get_y() else self.get_y()
-			self.multi_cell(20, 5, str(year), 0, 'L')
+			self.multi_cell(20, 5, str(year) + str(highY), 0, 'L')
 			self.set_xy(70, highY)
 			self.ln(1)
 

@@ -10,6 +10,7 @@ Information:
     Nacionality: Mexican
     PassportExp: 2030
     VisaExp: 2032
+    YearsExp: 13 Years
   Contact:
     Email: germanngc@gmail.com
     Phone: +52 33 3902 5911
@@ -57,7 +58,7 @@ Information:
 Job:
   - Company: FICO
     Title: Sr DevSecOps
-    Start: Nov/2021
+    Start: 2021-11-01
     End: Current
     Location: San Jose, CA, USA
     Description: "Moving into new challanged withtin the company, taking steps on the continuos integration and beyond, implementing security controls to move all the Development Lifecycle into the highway to production to automate and ensure the application security."
@@ -70,8 +71,8 @@ Job:
       - Documentation
   - Company: FICO
     Title: Sr DevOps
-    Start: Feb/2020
-    End: Nov/2021
+    Start: 2020-02-01
+    End: 2021-11-01
     Location: San Jose, CA, USA
     Description: "Working in a multidisciplinary team, I’ve worked with different tools and applications, such proprietary or third-party software and core OS systems, building, maintaining and supporting with on premise infrastructure or in public cloud in AWS. Most of the tools used on the different projects include but not limited to: Bitbucket, Jira, Jboss, Puppet, Foreman, Okta, AppD, Jenkins, Thousand Eyes, AWS , Opeshift and others."
     Activities:
@@ -80,9 +81,21 @@ Job:
       - Support
       - Collaboration
       - Documentation
+  - Company: LimMedia
+    Title: Lead Software Development Engineer
+    Start: 2022-09-01
+    End: Current
+    Location: New York, USA
+    Description: "Working as Technical Lead for the development group to assest and validate proyect and create deliverables, more frecuently to deliver Restfull API Applications."
+    Activities:
+      - Planning
+      - Deploy
+      - Support
+      - Deliver
+      - Management
   - Company: Nina Code
     Title: Co-Founder
-    Start: Jan/2019
+    Start: 2019-01-01
     End: Current
     Location: Puerto Vallarta, Jal, MEX
     Description: "Sale solutions to new clients and current ones. Planning from scratch, create suitable budgets and delivery. Find the perfect infrastructure of each project, Unix/Linux systems with Apache/Nginx, MySQL/MariaDB and PHP language and AGILE methodologies. Full Stack Developer and AWS consultor."
@@ -92,7 +105,7 @@ Job:
       - Technological Operations
   - Company: Evalart
     Title: Freelance Developer / Business Operation México
-    Start: Sep/2017
+    Start: 2017-09-01
     End: Current
     Location: Santiago, Stg, CHL
     Description: "Lead developer for application related to Recruitments Evaluations for IT areas mainly. Using technologies such’s a sandbox to run and execute language code such Python, Java, SQL, PHP and Others. Working in Front and Back end as a developer, but also working as first point of contact with clients on Mexico Region, managing the invoicing and billing of the application."
@@ -102,8 +115,8 @@ Job:
       - Sales and Billing in México
   - Company: ViralConnections
     Title: Cloud Architect Adviser / DevOps / Full Stack
-    Start: Feb/2017
-    End: Oct/2019
+    Start: 2017-02-01
+    End: 2019-10-01
     Location: Panama City, Pan, PAN
     Description: "Advisor in Cloud Technologies such as Amazon Web Services (AWS) and managing all the main projects for the business, develop, deployment and maintenance. Projects for multiple work business areas like Accounting, Marine services, Real Estates and others."
     Activities:
@@ -113,8 +126,8 @@ Job:
       - Full Stack Developer
   - Company: Antigravity Media
     Title: Sys Engineer / DevOps / Full Stack Dev
-    Start: Jul/2016
-    End: Jan/2019
+    Start: 2016-07-01
+    End: 2019-01-01
     Location: Seatle, Was, USA
     Description: "Handle infrastructure in the cloud, Unix/Linux environments AMI Linux, Ubuntu, CentOS, databases as MySQL, PostgreSQL and cloud storage S3 buckets, load balancing, monitoring using Amazon CloudWatch resources such disk space, CPU utilization and network, troubleshooting and maintenance of the servers. Infrastructure as a Service (IaaS) and Infrastructure as Code (IaC) working with Ruby, Chef, Jenkins, Code Ship and AWS Ops Works. Full Stack Developer for applications using primary languages Ruby on Rails, PHP, JavaScript, team lead of 3 developers in US and Mexico, supporting coordination between customers and dev team, work on enhancements, features and bug fixes, root cause analysis, post mortem reports, debug and diagnostics. Containerization and Virtualization using tools like Docker, Virtual Box and Vagrant."
     Activities:
@@ -125,8 +138,8 @@ Job:
       - DevOps
   - Company: Kaiser Permanente @ TCS
     Title: BMC L3 Infra Support
-    Start: Jan/2016
-    End: Jul/2016
+    Start: 2016-01-01
+    End: 2016-07-01
     Location: Guadalajara, Jal, MEX
     Description: "Trained in ITIL v3 and ITSM tools, especially in change management, in order to use BMC Remedy application for support over IBM AIX and Linux environments. Support for Dev teams within the company creating new modules for BMC. Maintenance and troubleshooting in the infrastructure and the BMC application. Review and maintain the queries for transaction in the Oracle Databases. Check availability of the nodes automatically and manually on daily basis. Debugging, diagnosing and work on root cause analysis whenever incidents arise. Work in a team with 8 team members, 1 on site, 2 nearshore and 5 offshore, always rotating any workload or issues that require continue attention. Involve in the process of the application into PaaS and working with the DevOps culture and practices."
     Activities:
@@ -138,8 +151,8 @@ Job:
       - First Point of Contact on Incidents
   - Company: AT&T @ Amdocs @ TCS
     Title: L2 Billing Support / Team Lead
-    Start: Jan/2012
-    End: Jan/2016
+    Start: 2012-01-01
+    End: 2016-01-01
     Location: Guadalajara, Jal, MEX
     Description: "Project lead for all the Level 2 team members in nearshore production operations. Performing deployment task related to the billing application by AT&T. Create scripts to retrieve information from logs, monitoring the main billing application, maintenance on the data servers such compressing and cleaning logs, troubleshooting issues, querying SQL string using oracle databases. Ensure the business continuity of the billing process in the production environments working on schedule periods of on-call person and working on schedule maintenances. Introduced in the DevOps culture with the use of Repositories and version control and working with continuous deployment (CD) in the initial stages."
     Activities:
@@ -150,8 +163,8 @@ Job:
       - Application Support
   - Company: Telecomunicaciones y Softwares
     Title: Web Developer Senior
-    Start: Jan/2010
-    End: Oct/2011
+    Start: 2010-01-01
+    End: 2011-10-01
     Location: Puerto Vallarta, Jal, MEX
     Description: "Full stack developer for multiple brands and companies, national and international. Participation in multiple project on day to day, sharing updates between team members. Handle client calls and new requirements, enhancements and bug fixes. Internal network maintenance and voice over IP (VoIP)."
     Activities:
@@ -160,8 +173,8 @@ Job:
       - Local Network Administrator
   - Company: Seguro Popular México (Gob Institution)
     Title: Brigade Lead / Data Capture
-    Start: Dec/2009
-    End: Jan/2010
+    Start: 2009-12-01
+    End: 2010-01-01
     Location: Tepic, Nay, MEX
     Description: "Coordinator in a small team of 4 members, our primary task was to travel to hard reach access locations and install temporary tents to register people into the social security system for statistics and delivery proper health plan in those locations. I was in charge of a pick- up truck, 4 laptops, finger print scanners, printers and safety personal. On every place we arrive I reached the local authority to coordinate the campaign."
     Activities:
