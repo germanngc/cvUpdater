@@ -25,18 +25,23 @@ class PDF(FPDF):
 	}
 
 	def getJobAge(self, start, end):
-		dayCheck = 0 #  (((end.month, end.day) < (start.month, start.day)))
-		yearDiff = end.year - start.year
-		ageInYears = yearDiff - dayCheck
-		remainingMonths = abs(end.month - start.month)
-
-		yearPloural = 'Year' if ageInYears == 1 else 'Years'
-		monthPloural = 'Month' if remainingMonths == 1 else 'Months'
+		num_years = end.year - start.year
+		num_months = end.month - start.month
 		
-		if ageInYears > 0:
-			return str(ageInYears) + ' ' + yearPloural + ', ' + str(remainingMonths) + ' ' + monthPloural
+		if end.day < start.day:
+			num_months -= 1
+
+		if num_months < 0:
+			num_years -= 1
+			num_months += 12
+
+		yearPloural = 'Year' if num_years == 1 else 'Years'
+		monthPloural = 'Month' if num_months == 1 else 'Months'
+
+		if num_years > 0:
+			return str(num_years) + ' ' + yearPloural + ', ' + str(num_months) + ' ' + monthPloural
 		else:
-			return str(remainingMonths) + ' ' + monthPloural
+			return str(num_months) + ' ' + monthPloural
 
 	def customvars(self):
 		self.Information = cvData.get('Information', [])
@@ -189,14 +194,14 @@ class PDF(FPDF):
 			highY = getY
 
 			self.set_xy(70, getY)
-			self.multi_cell(55, 5, str(name) + str(highY), 0, 'L')
+			self.multi_cell(55, 5, str(name), 0, 'L')
 			highY = highY if highY > self.get_y() else self.get_y()
 			self.set_xy(70 + 55, getY)
-			self.multi_cell(55, 5, str(institution) + str(highY), 0, 'L')
+			self.multi_cell(55, 5, str(institution), 0, 'L')
 			highY = highY if highY > self.get_y() else self.get_y()
 			self.set_xy(70 + 55 + 55, getY)
 			highY = highY if highY > self.get_y() else self.get_y()
-			self.multi_cell(20, 5, str(year) + str(highY), 0, 'L')
+			self.multi_cell(20, 5, str(year), 0, 'L')
 			self.set_xy(70, highY)
 			self.ln(1)
 
