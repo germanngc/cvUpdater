@@ -23,6 +23,8 @@ class PDF(FPDF):
 		"reset": [255, 255, 255],
 		"text": [80, 80, 80]
 	}
+	
+	mainHeadY = 11
 
 	def getJobAge(self, start, end):
 		num_years = end.year - start.year
@@ -52,8 +54,12 @@ class PDF(FPDF):
 		self.Technologies = self.Information.get('Technologies', [])
 		self.Skills = self.Information.get('Skills', [])
 
-		self.fullName = self.Information.get('FullName', 'Missing')
-		self.roleName = self.Information.get('RoleName', 'Missing')
+		self.Email = self.Information.get('Email', 'Missing')
+		self.FullName = self.Information.get('FullName', 'Missing')
+		self.Location = self.Information.get('Location', 'Missing')
+		self.Phone = self.Information.get('Phone', 'Missing')
+		self.RoleName = self.Information.get('RoleName', 'Missing')
+		self.Summary = self.Information.get('Summary', 'Missing')
 		self.Title = 'Resume py Parser by Nina Code'
 
 		self.Job = cvData.get('Job', [])
@@ -82,167 +88,77 @@ class PDF(FPDF):
 	def footer(self):
 		self.set_y(-15)
 		self.set_font('OpenSansItalic', '', 8)
-		self.cell(0, 10, 'Page' + str(self.page_no()) + ' / {nb}', 0, 0, 'C')
+		self.cell(0, 10, 'Page ' + str(self.page_no()) + ' / {nb}', 0, 1, 'C')
+		self.set_y(-10)
+		self.cell(0, 10, 'Iconos by Freepik, Ilham Fitrotul Hayat and Those Icons - Flaticon', 0, 1, 'C', 0, 'https://www.flaticon.es')
 
-	def rightCol(self):
-		self.set_xy(70, 11)
-		self.set_font('OpenSansBold', '', 16)
-		self.set_text_color(self.template_color['text'][0], self.template_color['text'][1], self.template_color['text'][2])
-		self.cell(140, 8, 'Work Experience', 0, 1, 'L', 0)
-		self.ln(10)
-
-		for item in self.Job:
-			activities = item.get('Activities', [])
-			company = item.get('Company', 'Unknown')
-			description = item.get('Description', 'Unknown')
-			end = item.get('End', date.today())
-			location = item.get('Location', 'Unknown')
-			start = item.get('Start', date.today())
-			title = item.get('Title', 'Unknown')
-
-			end = date.today() if end == 'Current' else end
-
-			try:
-				parse(end.strftime("%B/%Y"), False)
-			except ValueError:
-				end = date.today()
-			except TypeError:
-				end = date.today()
-
-			try:
-				parse(start.strftime("%B/%Y"), False)
-			except ValueError:
-				start = date.today()
-			except TypeError:
-				start = date.today()
-
-			self.set_x(70)
-			self.set_font('OpenSansBold', '', 10)
-			self.cell(70, 5, str(title), 0, 0, 'L')
-			self.cell(70, 5, str(company), 0, 1, 'R')
-			self.ln(2)
-			self.set_x(70)
-			self.set_font('OpenSans', '', 10)
-			self.cell(100, 5, str(location + '   /   From ' + start.strftime("%B/%Y") + ' to ' + end.strftime("%B/%Y")), 'B', 0, 'L')
-			self.cell( 40, 5, self.getJobAge(start, end), 'B', 1, 'R')
-			self.ln(2)
-			self.set_x(70)
-			self.set_font('OpenSans', '', 10)
-			self.multi_cell(140, 5, str(description), 0, 'J')
-			self.ln(2)
-			self.set_x(70)
-			self.set_font('OpenSansBold', '', 10)
-			self.cell(15, 5, str('Activities: '), 0, 0, 'L')
-			self.set_font('OpenSans', '', 10)
-			self.multi_cell(115, 5, " / ".join(activities), 0, 'J')
-			self.ln(8)
-
-		self.add_page()
-		self.set_x(70)
-		self.set_font('OpenSansBold', '', 16)
-		self.set_text_color(self.template_color['text'][0], self.template_color['text'][1], self.template_color['text'][2])
-		self.cell(130, 8, 'Certifications', 0, 1, 'L', 0)
-		self.ln(8)
-
-		self.set_x(70)
-		self.set_font('OpenSansBold', '', 10)
-		self.cell(55, 5, str('Certification'), 'B', 0, 'L')
-		self.cell(55, 5, str('Insititution'), 'B', 0, 'L')
-		self.cell(20, 5, str('Year'), 'B', 1, 'L')
-		self.set_font('OpenSans', '', 10)
-
-		for item in self.Certification:
-			institution = item.get('Institution', 'Unknown')
-			name = item.get('Name', 'Unknown')
-			year = item.get('Year', 'Unknown')
-
-			getY = self.get_y()
-			highY = getY
-
-			self.set_xy(70, getY)
-			self.multi_cell(55, 5, str(name), 0, 'L')
-			highY = highY if highY > self.get_y() else self.get_y()
-			self.set_xy(70 + 55, getY)
-			self.multi_cell(55, 5, str(institution), 0, 'L')
-			highY = highY if highY > self.get_y() else self.get_y()
-			self.set_xy(70 + 55 + 55, getY)
-			highY = highY if highY > self.get_y() else self.get_y()
-			self.multi_cell(20, 5, str(year), 0, 'L')
-			self.set_xy(70, highY)
-			self.ln(1)
-
-		self.ln(8)
-		self.set_x(70)
-		self.set_font('OpenSansBold', '', 16)
-		self.set_text_color(self.template_color['text'][0], self.template_color['text'][1], self.template_color['text'][2])
-		self.cell(130, 8, 'Recognitions', 0, 1, 'L', 0)
-		self.ln(8)
-
-		self.set_x(70)
-		self.set_font('OpenSansBold', '', 10)
-		self.cell(55, 5, str('Name'), 'B', 0, 'L')
-		self.cell(55, 5, str('Insititution'), 'B', 0, 'L')
-		self.cell(20, 5, str('Year'), 'B', 1, 'L')
-		self.set_font('OpenSans', '', 10)
-
-		for item in self.Recognition:
-			institution = item.get('Institution', 'Unknown')
-			name = item.get('Name', 'Unknown')
-			year = item.get('Year', 'Unknown')
-
-			getY = self.get_y()
-			highY = getY
-
-			self.set_xy(70, getY)
-			self.multi_cell(55, 5, str(name), 0, 'L')
-			highY = highY if highY > self.get_y() else self.get_y()
-			self.set_xy(70 + 55, getY)
-			self.multi_cell(55, 5, str(institution), 0, 'L')
-			highY = highY if highY > self.get_y() else self.get_y()
-			self.set_xy(70 + 55 + 55, getY)
-			highY = highY if highY > self.get_y() else self.get_y()
-			self.multi_cell(20, 5, str(year), 0, 'L')
-			self.set_xy(70, highY)
-			self.ln(1)
-
-		self.ln(8)
-		self.set_x(70)
-		self.set_font('OpenSansBold', '', 16)
-		self.set_text_color(self.template_color['text'][0], self.template_color['text'][1], self.template_color['text'][2])
-		self.cell(130, 8, 'Education', 0, 1, 'L', 0)
-		self.ln(8)
-		self.set_font('OpenSans', '', 10)
-
-		for item in self.Education:
-			institution = item.get('Institution', 'Unknown')
-			location = item.get('Location', 'Unknown')
-			name = item.get('Name', 'Unknown')
-			year = item.get('Year', 'Unknown')
-
-			self.set_x(70)
-			self.set_font('OpenSansBold', '', 10)
-			self.cell(130, 5, str(name), 0, 1, 'L')
-			self.set_x(70)
-			self.set_font('OpenSans', '', 10)
-			self.cell(130, 5, str(institution + ' / ' + location + ' / ') + str(year), 0, 1, 'L')
-			self.ln(1)
-	
-	def leftCol(self):
+	def mainHead(self):
 		self.set_xy(5, 11)
+		self.set_x(5)
 		self.set_font('OpenSansBold', '', 16)
 		self.set_text_color(self.template_color['text'][0], self.template_color['text'][1], self.template_color['text'][2])
-		self.cell(60, 8, self.fullName, 0, 1, 'C', 0)
+		self.cell(200, 8, self.FullName, 0, 1, 'L', 0)
 
 		self.set_x(5)
-		self.set_font('OpenSansBold', '', 14)
+		self.set_font('OpenSans', '', 14)
 		self.set_text_color(self.template_color['background'][0], self.template_color['background'][1], self.template_color['background'][2])
-		self.cell(60, 6, self.roleName, 0, 1, 'C', 0)
+		self.cell(200, 6, self.RoleName, 0, 1, 'L', 0)
+		self.ln()
+
+		self.set_x(5)
+		self.set_font('OpenSansLight', '', 12)
+		self.set_text_color(self.template_color['text'][0], self.template_color['text'][1], self.template_color['text'][2])
+
+		getX = self.get_x()
+		getY = self.get_y()
+		cellSizePhone = math.ceil(self.get_string_width(self.Phone)) + 2
+		cellSizeEmail = math.ceil(self.get_string_width(self.Email)) + 2
+		cellSizeLocation = math.ceil(self.get_string_width(self.Location)) + 2
+		cellSizeSep = math.ceil((cellSizePhone + cellSizeEmail + cellSizeLocation + 16) / 2)
+
+		self.cell(cellSizeSep, 6, '', 0, 0, 'L', 0)
+		self.set_x(getX + cellSizeSep)
+
+		getX = self.get_x()
+
+		self.image('./icons/phone.png', getX, getY + 1, 4, 4, 'PNG')
+		self.set_x(getX + 4)
+		self.cell(cellSizePhone, 6, self.Phone, 0, 0, 'L', 0, 'tel:' + self.Phone)
+		getX = self.get_x() + 2
+		self.set_x(getX)
+
+		self.image('./icons/at.png', getX, getY + 1, 4, 4, 'PNG')
+		self.set_x(getX + 4)
+		self.cell(cellSizeEmail, 6, self.Email, 0, 0, 'L', 0, 'mailto:' + self.Email)
+		getX = self.get_x() + 2
+		self.set_x(getX)
+
+		self.image('./icons/location.png', getX, getY + 1, 4, 4, 'PNG')
+		self.set_x(getX + 4)
+		self.cell(cellSizeLocation, 6, self.Location, 0, 0, 'L', 0)
+		self.ln()
+
+		self.set_x(5)
+		self.set_font('OpenSansBold', '', 16)
+		self.cell(200, 6, "Summary", 0, 1, 'L', 0)
+
+		self.set_x(5)
+		self.set_font('OpenSansLight', '', 10)
+		self.multi_cell(200, 6, self.Summary, 0, 'L', 0)
+		self.ln()
+
+		self.ln()
+		self.mainHeadY = self.get_y()
+
+	def leftCol(self):
+		# self.set_xy(5, 11)
+		self.set_xy(5, self.mainHeadY)
 
 		# About me Block
 		self.leftColBlock(self.AboutMe, 'ABOUT ME', 'table')
 
 		# Contacts Block
-		self.leftColBlock(self.Contact, 'CONTACT', 'table')
+		# self.leftColBlock(self.Contact, 'CONTACT', 'table')
 
 		# Languages Block
 		self.leftColBlock(self.Languages, 'LANGUAGES', 'table')
@@ -257,7 +173,6 @@ class PDF(FPDF):
 		self.leftColBlock(self.Skills, 'SKILLS', 'inline')
 
 	def leftColBlock(self, data, blockName = 'Missing', layout = 'table'):
-		self.ln(5)
 		self.set_x(5)
 		self.set_font('OpenSansBold', '', 12)
 		self.set_text_color(self.template_color['text'][0], self.template_color['text'][1], self.template_color['text'][2])
@@ -278,6 +193,222 @@ class PDF(FPDF):
 			self.set_x(5)
 			self.set_font('OpenSans', '', 10)
 			self.multi_cell(60, 5, " / ".join(data), 0, 'J')
+
+		self.ln(5)
+
+	def rightCol(self):
+		xMarker = 70 if self.page_no() == 1 else 5
+		reversedXMarker = 5 if self.page_no() == 1 else 70
+
+		self.set_xy(xMarker, self.mainHeadY)
+		self.set_font('OpenSansBold', '', 16)
+		self.set_text_color(self.template_color['text'][0], self.template_color['text'][1], self.template_color['text'][2])
+
+		if (self.get_y() + 8 + 8) > 250:
+			self.add_page()
+			self.set_x(xMarker)
+
+		self.cell(140 + (reversedXMarker + 5), 8, 'Work Experience', 0, 1, 'L', 0)
+		self.ln(8)
+
+		for item in self.Job:
+			activities = item.get('Activities', [])
+			company = item.get('Company', 'Unknown')
+			description = item.get('Description', 'Unknown')
+			end = item.get('End', date.today())
+			end_string = item.get('End', 'Current')
+			location = item.get('Location', 'Unknown')
+			start = item.get('Start', date.today())
+			title = item.get('Title', 'Unknown')
+
+			end = date.today() if end == 'Current' else end
+			xMarker = 70 if self.page_no() == 1 else 5
+			reversedXMarker = 5 if self.page_no() == 1 else 70
+
+			try:
+				parse(end.strftime("%B/%Y"), False)
+			except ValueError:
+				end = date.today()
+			except TypeError:
+				end = date.today()
+
+			try:
+				parse(end_string.strftime("%B/%Y"), False)
+				end_string = end_string.strftime("%B/%Y")
+			except ValueError:
+				end_string = 'Current'
+			except TypeError:
+				end_string = 'Current'
+			except AttributeError:
+				end_string = 'Current'
+
+			try:
+				parse(start.strftime("%B/%Y"), False)
+			except ValueError:
+				start = date.today()
+			except TypeError:
+				start = date.today()
+
+			self.set_x(xMarker)
+			self.set_font('OpenSansBold', '', 10)
+			self.cell(70 + ((reversedXMarker - 5) / 2), 4, str(title), 0, 0, 'L')
+			self.cell(70 + ((reversedXMarker - 5) / 2), 4, str(company), 0, 1, 'R')
+			self.ln(2)
+			self.set_x(xMarker)
+			self.set_font('OpenSans', '', 10)
+			self.cell(100 + (reversedXMarker - 5), 6, str(location + '   /   From ' + start.strftime("%B/%Y") + ' to ' + end_string), 'B', 0, 'L')
+			self.cell(40, 6, self.getJobAge(start, end), 'B', 1, 'R')
+			self.ln(2)
+			self.set_x(xMarker)
+			self.set_font('OpenSansLight', '', 10)
+			self.multi_cell(140 + (reversedXMarker - 5), 6, str(description), 0, 'J')
+			self.ln(2)
+			self.set_x(xMarker)
+			self.set_font('OpenSans', '', 10)
+			self.cell(15, 6, str('Activities: '), 0, 0, 'L')
+			self.set_font('OpenSansLight', '', 10)
+			self.multi_cell(115 + (reversedXMarker - 5), 6, " / ".join(activities), 0, 'J')
+			self.ln(8)
+
+			if self.get_y() > 250:
+				self.add_page()
+
+		xMarker = 70 if self.page_no() == 1 else 5
+		reversedXMarker = 5 if self.page_no() == 1 else 70
+
+		# self.add_page()
+		self.set_x(xMarker)
+		self.set_font('OpenSansBold', '', 16)
+		self.set_text_color(self.template_color['text'][0], self.template_color['text'][1], self.template_color['text'][2])
+
+		if (self.get_y() + 8 + 8) > 250:
+			self.add_page()
+			self.set_x(xMarker)
+
+		self.cell(130 + (reversedXMarker - 5), 8, 'Certifications', 0, 1, 'L', 0)
+		self.ln(8)
+
+		self.set_x(xMarker)
+		self.set_font('OpenSansBold', '', 10)
+		self.cell(55 + ((reversedXMarker - 5) / 2), 6, str('Certification'), 'B', 0, 'L')
+		self.cell(55 + ((reversedXMarker - 5) / 2), 6, str('Insititution'), 'B', 0, 'L')
+		self.cell(20, 6, str('Year'), 'B', 1, 'L')
+		self.ln(2)
+		self.set_font('OpenSans', '', 10)
+
+		for item in self.Certification:
+			institution = item.get('Institution', 'Unknown')
+			name = item.get('Name', 'Unknown')
+			year = item.get('Year', 'Unknown')
+
+			getY = self.get_y()
+			highY = getY
+			xMarker = 70 if self.page_no() == 1 else 5
+			reversedXMarker = 5 if self.page_no() == 1 else 70
+
+			self.set_xy(xMarker, getY)
+			self.multi_cell(55 + ((reversedXMarker - 5) / 2), 4, str(name), 0, 'L')
+			highY = highY if highY > self.get_y() else self.get_y()
+
+			self.set_xy(xMarker + 55 + ((reversedXMarker - 5) / 2), getY)
+			self.multi_cell(55 + ((reversedXMarker - 5) / 2), 4, str(institution), 0, 'L')
+			highY = highY if highY > self.get_y() else self.get_y()
+
+			self.set_xy(xMarker + 55 + 55 + ((reversedXMarker - 5) / 2) + ((reversedXMarker - 5) / 2), getY)
+			self.multi_cell(20, 4, str(year), 0, 'L')
+			highY = highY if highY > self.get_y() else self.get_y()
+
+			if highY > 250:
+				self.add_page()
+				highY = 11
+
+			self.set_xy(xMarker, highY)
+			self.ln(1)
+
+		xMarker = 70 if self.page_no() == 1 else 5
+		reversedXMarker = 5 if self.page_no() == 1 else 70
+
+		self.ln(8)
+		self.set_x(xMarker)
+		self.set_font('OpenSansBold', '', 16)
+		self.set_text_color(self.template_color['text'][0], self.template_color['text'][1], self.template_color['text'][2])
+
+		if (self.get_y() + 8 + 8) > 250:
+			self.add_page()
+			self.set_x(xMarker)
+
+		self.cell(130 + (reversedXMarker - 5), 8, 'Recognitions', 0, 1, 'L', 0)
+		self.ln(8)
+
+		self.set_x(xMarker)
+		self.set_font('OpenSansBold', '', 10)
+		self.cell(55 + ((reversedXMarker - 5) / 2), 6, str('Name'), 'B', 0, 'L')
+		self.cell(55 + ((reversedXMarker - 5) / 2), 6, str('Insititution'), 'B', 0, 'L')
+		self.cell(20, 6, str('Year'), 'B', 1, 'L')
+		self.ln(2)
+		self.set_font('OpenSans', '', 10)
+
+		for item in self.Recognition:
+			institution = item.get('Institution', 'Unknown')
+			name = item.get('Name', 'Unknown')
+			year = item.get('Year', 'Unknown')
+
+			getY = self.get_y()
+			highY = getY
+			xMarker = 70 if self.page_no() == 1 else 5
+			reversedXMarker = 5 if self.page_no() == 1 else 70
+
+			self.set_xy(xMarker, getY)
+			self.multi_cell(55 + ((reversedXMarker - 5) / 2), 4, str(name), 0, 'L')
+			highY = highY if highY > self.get_y() else self.get_y()
+
+			self.set_xy(xMarker + 55 + ((reversedXMarker - 5) / 2), getY)
+			self.multi_cell(55 + ((reversedXMarker - 5) / 2), 4, str(institution), 0, 'L')
+			highY = highY if highY > self.get_y() else self.get_y()
+
+			self.set_xy(xMarker + 55 + 55 + ((reversedXMarker - 5) / 2) + ((reversedXMarker - 5) / 2), getY)
+			self.multi_cell(20, 4, str(year), 0, 'L')
+			highY = highY if highY > self.get_y() else self.get_y()
+
+			if highY > 250:
+				self.add_page()
+				highY = 11
+
+			self.set_xy(xMarker, highY)
+			self.ln(1)
+
+		xMarker = 70 if self.page_no() == 1 else 5
+		reversedXMarker = 5 if self.page_no() == 1 else 70
+
+		self.ln(8)
+		self.set_x(xMarker)
+		self.set_font('OpenSansBold', '', 16)
+		self.set_text_color(self.template_color['text'][0], self.template_color['text'][1], self.template_color['text'][2])
+
+		if (self.get_y() + 8 + 8) > 250:
+			self.add_page()
+			self.set_x(xMarker)
+
+		self.cell(130 + (reversedXMarker - 5), 8, 'Education', 0, 1, 'L', 0)
+		self.ln(8)
+		self.set_font('OpenSans', '', 10)
+
+		for item in self.Education:
+			institution = item.get('Institution', 'Unknown')
+			location = item.get('Location', 'Unknown')
+			name = item.get('Name', 'Unknown')
+			year = item.get('Year', 'Unknown')
+			xMarker = 70 if self.page_no() == 1 else 5
+			reversedXMarker = 5 if self.page_no() == 1 else 70
+
+			self.set_x(xMarker)
+			self.set_font('OpenSansBold', '', 10)
+			self.cell(130 + (reversedXMarker - 5), 4, str(name), 0, 1, 'L')
+
+			self.set_x(xMarker)
+			self.set_font('OpenSans', '', 10)
+			self.cell(130 + (reversedXMarker - 5), 4, str(institution + ' / ' + location + ' / ') + str(year), 0, 1, 'L')
+			self.ln(1)
 
 	def separatorA(self, x):
 		self.set_draw_color(self.template_color['lines'][0], self.template_color['lines'][1], self.template_color['lines'][2])
@@ -300,8 +431,10 @@ pdf.set_margins(0, 0, 0)
 pdf.add_font('OpenSans', '', r'fonts/Open_Sans/static/OpenSans_Condensed/OpenSans_Condensed-Regular.ttf', uni=True)
 pdf.add_font('OpenSansBold', '', r'fonts/Open_Sans/static/OpenSans_Condensed/OpenSans_Condensed-Bold.ttf', uni=True)
 pdf.add_font('OpenSansItalic', '', r'fonts/Open_Sans/static/OpenSans_Condensed/OpenSans_Condensed-Italic.ttf', uni=True)
+pdf.add_font('OpenSansLight', '', r'fonts/Open_Sans/static/OpenSans_Condensed/OpenSans_Condensed-Light.ttf', uni=True)
 pdf.add_page()
 # pdf.set_font('OpenSans', '', 12)
+pdf.mainHead()
 pdf.leftCol()
 pdf.rightCol()
 

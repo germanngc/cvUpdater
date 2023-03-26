@@ -4,6 +4,8 @@ Information:
   Phone: +52 33 3902 5911
   RoleName: DevSecOps
   Email: germanngc@gmail.com
+  Location: Zapopan, Jalisco, MEX.
+  Summary: "I'm an experience engineer with more than 13 years on the IT field, focused now days on Cloud Infrastructure and CI/CD, with a full and strong background on development, specially on web applications and shell scripting. I'm a team player, always looking for the best solution for the problem, and always looking for the best way to do things. I'm a fast learner, and I'm always looking for new challenges."
   AboutMe:
     Birthday: Jun/22/1987
     Location: Zapopan, Jalisco, MEX.
@@ -21,7 +23,7 @@ Information:
     LinkedIn: https://linkedin.com/in/germanngc/
     Github: https://github.com/germanngc
   Skills:
-    - 13 Years of Experience on IT Services
+    - +13 Years of Experience on IT Services
     - ITIL v3
     - ITSM
     - PaaS
@@ -182,6 +184,9 @@ Job:
       - Coordinate with the local authorities
       - Drive and settle on the next town
 Certification:
+  - Name: HashiCorp Certified Terraform Associate 2023
+    Institution: Udemy
+    Year: 2023
   - Name: AWS Cloud Practitioner Certification
     Institution: AWS Training & Certifications
     Year: 2022
@@ -213,6 +218,9 @@ Certification:
     Institution: Universidad de Guadalajara
     Year: 2006
 Recognition:
+  - Name: Spot Award for Performance
+    Institution: FICO
+    Year: 2023
   - Name: Spot Award for Performance
     Institution: FICO
     Year: 2022
