@@ -220,6 +220,7 @@ class PDF(FPDF):
 			location = item.get('Location', 'Unknown')
 			start = item.get('Start', date.today())
 			title = item.get('Title', 'Unknown')
+			type = item.get('Type', 'Full time')
 
 			end = date.today() if end == 'Current' else end
 			xMarker = 70 if self.page_no() == 1 else 5
@@ -251,8 +252,9 @@ class PDF(FPDF):
 
 			self.set_x(xMarker)
 			self.set_font('OpenSansBold', '', 10)
-			self.cell(70 + ((reversedXMarker - 5) / 2), 4, str(title), 0, 0, 'L')
-			self.cell(70 + ((reversedXMarker - 5) / 2), 4, str(company), 0, 1, 'R')
+			self.cell(52 + ((reversedXMarker - 5) / 3), 4, str(title), 0, 0, 'L')
+			self.cell(35 + ((reversedXMarker - 5) / 3), 4, str(type), 0, 0, 'C')
+			self.cell(52 + ((reversedXMarker - 5) / 3), 4, str(company), 0, 1, 'R')
 			self.ln(2)
 			self.set_x(xMarker)
 			self.set_font('OpenSans', '', 10)
