@@ -1,0 +1,275 @@
+Information:
+  Name: Victor García
+  FullName: Victor Abdiel García González
+  Phone: +52 33 3460 7659
+  RoleName: Principal AWS Cloud Architect
+  Email: figomexicano7@gmail.com
+  Location: Zapopan, Jalisco, MEX.
+  Summary: "I am a seasoned Principal AWS Cloud Architect with a robust 9-year track record in the technology sector. My career is marked by extensive hands-on experience and leadership \
+    in continuous integration and continuous deployment (CI/CD), cloud architecture, DevOps practices, as well as mastery in tools such as Jenkins and Ansible. I have spearheaded numerous \
+    successful migrations to the cloud, optimizing operational efficiencies and championing a culture of innovation. "
+  AboutMe:
+    Birthday: Mar/11/1985
+    Location: Zapopan, Jalisco, MEX.
+    Nacionality: Mexican
+    Passport: Yes
+    Visa: Yes
+    YearsExp: 16 Years
+  Contact:
+    Email: figomexicano7@gmail.com
+    Phone: +52 33 3460 7659
+  Languages:
+    Spanish: Native
+    English: Fluent
+  Social:
+    LinkedIn: https://linkedin.com/in/victor-abdiel-garcia-b7083993/
+  Skills:
+    - Cloud Architecture
+    - DevOps
+    - Support & Troubleshooting
+    - Scripting
+    - Logging
+    - Monitoring
+  Technologies:
+    - AWS
+    - Azure
+    - Oracle Cloud
+    - Jenkins
+    - Chef
+    - Ansible
+    - Docker
+    - Git
+    - GitLab
+    - Jira
+    - Business
+    - Terraform
+    - Linux/Unix
+    - Encryption
+    - Middleware
+    - OpsView
+    - Scom
+    - Telegraf
+    - Prometheus
+    - Grafana
+    - Puppet
+    - Ansible
+    - MySQL
+    - DB2
+    - WebLogic
+    - Was
+    - JBoss
+Job:
+  - Company: NBC Universal / Wizeline
+    Title: AWS Cloud Architect - Staff SRE
+    Type: Full Time
+    Start: 2022-07-01
+    End: Current
+    Location: Guadalajara, Jal, MEX
+    Description: "Taking leadership of the Cloud - SRE area, leading the migrations from on-prem to cloud, leading AWS architecture for reduce costs and good performance, \
+      working with more than 100 services, traducing all manual implementations to IaC using terraform. Provisioning AWS services requirements from Dev team, buckets \
+      creation, custom policies, route54, vpc, ALB, ELB etc. Diagnose and troubleshoot production issues. Monitoring implementations with Grafana, Prometheus, Data Dog \
+      and observability practices. Building Serverless infrastructure (Lambdas) using bitbucket, aws, terraform and puppet. Leading the scrums meetings and manage the \
+      backlog, responsible for 4 DevOps. Manage a team of 7 SREs, 1:1 meeting with all the team, career guide and mentor. Capacity planning and technical interviewer."
+    Activities:
+      - Terraform
+      - AWS
+      - Bitbucket
+      - Jira
+      - Linux
+      - Windows
+      - Docker
+      - ECS
+      - Lambdas
+  - Company: Apptegy / Wizeline
+    Title: Advanced DevOps / SRE
+    Type: Full Time
+    Start: 2021-11-01
+    End: 2022-07-30
+    Location: Guadalajara, JAL, MEX
+    Description: "Building Infrastructure for apptegy using the concept “infrastructure as a code” designing and implementing AWS environments, implementing DevOps culture as a native process for all software development projects."
+    Activities:
+      - Terraform
+      - AWS
+      - Github
+      - Jira
+      - Linux
+      - Windows
+      - Docker
+      - Kubernetes
+  - Company: FICO
+    Title: Principal DevOps / SRE
+    Type: Full Time
+    Start: 2020-01-01
+    End: 2021-11-01
+    Location: Guadalajara, JAL, MEX
+    Description: "Build cloud orchestration software for provisioning, operating, and monitoring IaaS/PaaS services: network (e.g., f5 big-ip LTM/DNS), compute instances (ec2, vm), \
+      databases, software packages, images, and containers."
+    Activities:
+      - Bitbucket
+      - AWS
+      - Jenkis
+      - Docker
+      - Linux
+      - Bash
+      - Vmware
+      - Terraform
+  - Company: Electronic Arts (EA)
+    Title: Lead Software Development Engineer
+    Type: Full Time
+    Start: 2019-06-01
+    End: 2020-01-01
+    Location: Burnaby, Vancuver, CA
+    Description: "Responsible for implementation of CI/CD on current apps deploy. Create Infrastructure as a code, create containers for Micro services, build pods on Kubernetes, \
+      nrpe implementation.Install and configure Monitoring for differentness services like slack, zoom,LumApps etc."
+    Activities:
+      - Git
+      - GitLab
+      - Github
+      - SVN
+      - Jenkins
+      - Circle CI
+      - Ansible
+      - Chef
+      - Terraform
+      - CloudFormation
+      - OpsView
+      - Scom
+      - Telegraf
+      - Prometheus
+      - Grafana
+      - Jenkins
+      - Ansible
+      - AWS
+      - Azure
+      - Docker
+      - Django
+  - Company: Oracle
+    Title: IT Senior Consultant, Cloud Enterprise Operations
+    Type: Full Time
+    Start: 2015-04-01
+    End: 2019-05-01
+    Location: Guadalajara, JAL, MEX
+    Description: "Part of group which manages content within Oracle for 100K + employees including managing external websites like www.oracle.com, cloud.oracle.com and \
+      several internal emerging applications. These applications are powered by Oracle WebCenter sites, Oracle Endeca, Oracle Enterprise Content Management and Oracle \
+      Secure Enterprise Search. These applications OHS Installations and Support are managed 24x7 across the globe and their operations are coordinated among teams \
+      across other regions. Oracle Cloud DevOps AWS - Cloud, EC2, S3, ECS, EKS, VPC, Peer connection, Internet gateway, CustomerGateway, Nat Gateway, Security Groups, \
+      Network ACLs Terraform with AWS -EC2, AMIs for creating infrastructure as a code. Migration to AWS to Oracle Cloud. PaaS, Docker container in micro services \
+      Kubernetes for docker. Ansible for automate and continues testing. Administration F5-big Ip, load balance. Akamai administration IaaS / PaaS Support. Endeca \
+      installation, Support, Deploy QA, stage, DR, and Production management Owner of 3 important sites, supporting, deploying, tuning Design the technical components \
+      based on the defined business requirements. Enterprise Manager Cloud Control 13c Monitor performance of web infrastructure. Red Hat Linux 6 and Oracle Linux \
+      Experience. Oracle FMW/SOA Suite 11g, 12c installation and Support-Management Setup, installation, and administration of WebLogic Application server 11g and 12 c, \
+      fusion Middleware. Managed microservices environments Creating automated build/deployment/maintenance of scripts. Upgrade and migration lead for 11g to 12c \
+      WebCenter Sites upgrade from 11g to 12c WebCenter Content 11g to 12c OHS upgrade 11g to 12c Starting migration for Oracle Cloud Public."
+    Activities:
+      - Jenkins
+      - Ansible
+      - Chef
+      - AWS
+      - Docker
+      - Kubernetes
+      - Oracle Cloud
+      - Terraform
+  - Company: Bank of America (BOA)
+    Title: Middleware Admin
+    Type: Contractor
+    Start: 2013-06-01
+    End: 2015-03-01
+    Location: Guadalajara, JAL, MEX
+    Description: "Object Orchestration Services (OOS) is the middleware for Bank of America Application Software Engineering. Utilizing the WebMethods Integration Platform products \
+      as the base for this new middleware services. By creating an Enterprise middleware using the WebMethods integration platform, customers can now integrate business processes \
+      more effectively across the entire enterprise. The Enterprise middleware is created by the deployment of an integration network built on the foundation of proven, comprehensive \
+      integration technology from WebMethods. OOS provides the interfaces between front end application (Ecomm, VGS, Merrill lynch, etc.) and different back-end application \
+      (BOSS, Fast, CTCS, TSYS, Third party vendors, etc.). OOS is a true middleware technology that acts as a bridge, providing communication between various client and back-end legacy \
+      bank data stores, using reusable web services. Based on the location and request of the client, OOS middleware connects to the appropriate data store and responds with data in a \
+      pre-defined format. The OOS middleware runs on WebMethods Integration and Enterprise servers. OOS Environments Management currently support DEV, SIT, CIT, TT QA environments. \
+      We work closely with the build, configuration, and application testing teams; as well as component owners, infrastructure teams and enterprise Change Control groups for large \
+      scale and major releases, independent initiatives, and technical environment upgrade/enhancement initiatives. We continue to strive toward integrating Testing Operations environments \
+      to provide a seamless testing experience for the environment clients. Configuration,JDBC connectivity and connector alias setting management in WebMethods Integration server. \
+      Analyzing the defects using the generated Test Data and finding the root cause for the defect and updating the same in Quality Center and also take appropriate action. Recreating \
+      the test scenario in CIT and SIT. Root-cause analysis of defects and coordinating with the testing team, development teams and different backend team to triage defects/tasks that \
+      occur during the release. Coordination in deployments of application and validation of application after deployment."
+    Activities:
+      - Windows
+      - DB2
+      - Bladelogic
+      - Remedy
+      - ITIL
+  - Company: USAA
+    Title: Middleware Admin and Support
+    Type: Contractor
+    Start: 2013-01-01
+    End: 2013-10-01
+    Location: Guadalajara, JAL, MEX
+    Description: "●	Created and attended tickets about failures in the applications and calls from to many teams. Attended all incident in the applications take care \
+      of the business impact, estimation time in the incident. Autosys scheduling jobs on Unix platform. Create tests for sanity checks for the apps. Provide \
+      troubleshooting on Unix OS, networking, and databases. WebLogic app server administration. Monitoring critical jobs and create cron jobs and verify the logs. \
+      Had meetings client's requirements to know the scope solution's systems. Provide support to disk space and swap memory. Analyze scenarios for make shell scripting for automation."
+    Activities:
+      - Windows
+      - DB2
+      - Bladelogic
+      - Remedy
+      - ITIL
+  - Company: AMDOCS / AT&T
+    Title: Unix/Linux Engineer Automation
+    Start: 2011-03-01
+    End: 2012-12-01
+    Type: Contractor
+    Location: Guadalajara, JAL, MEX
+    Description: "Taking care of the LSP SLA, running and create maps in AMC tool. Take care of daemons in AMC tool and also in Unix (HP) in several boxes. Escalate the \
+      issues to other teams like CM, T1, Infra. Modify and create tickets in Webtrax tool and AOTS for. Follow tasks that other team assigned to us like run specials \
+      Jobs or make some workarounds. Working in each release side by side with infra, AR team CM team, until EOD. Taking care of the cycles rejected, DSL and billing cycles. \
+      Follow the billing cycle until the confirmation. Run maps manually. Participate in all Releases since the implementation until the changes. Provide on-call Support. \
+      Participate in daily meetings with all the teams involved. Make many queries in SQL-PLUS for to know the status about any billing data. Create some scripts in KornShell."
+    Activities:
+      - Linux
+      - Unix
+      - Weblogic
+      - Webtrax
+      - ITIL
+  - Company: Intel Corporation
+    Title: Web Java Developer
+    Type: Full Time
+    Start: 2010-03-01
+    End: 2011-02-01
+    Location: Guadalajara, JAL, MEX
+    Description: "My job was in the graphics area working on 3D department making the validation for new processor in pre-silicon and the driver for Directx9 and 10 and also Debug \
+      from de issues (defects) that the testers found them part of my activities and responsibilities are as follows: Provide support to all validation scripts on Unix shell and \
+      create new ones for automate some old process. Drive process improvements such as automating manual processes and data reporting. Develop little programs in C ++ on Directx9 \
+      for validations with the drivers on windows (Power shell). Take care of the meeting with other teams. Consulting and connecting with the data bases. Create a database for more \
+      common issues for have a collection on issues. Develop and planning the migration strategy UNIX to Linux all the old scripts Korn shell to bash. Analyze the renders and the \
+      determinate in which part of the directx9 pipeline is failing."
+    Activities:
+      - LINUX
+      - UNIX
+      - JAVA
+      - DIRECTX
+      - OPENGL
+  - Company: Accend Consulting
+    Title: Linux Support
+    Type: Full Time
+    Start: 2008-10-01
+    End: 2011-02-01
+    Location: Guadalajara, JAL, MEX
+    Description: "Supporting more than 100 machines and 2 servers and a small cisco Network under Linux Suse and Gentoo, Configuration for Samba in order to see folders on \
+      windows servers, support financial ERP adding users, deleting. Supporting sendmail, Novel admin, coordinate for ERP releases with vendor developers."
+    Activities:
+      - LINUX
+      - UNIX
+      - NOVELL
+      - SENDMAIL
+      - CISCO
+      - SAP
+Certification:
+  # - Name: Certification
+  #   Institution: Certfication
+  #   Year: 2024
+Recognition:
+  # - Name: Recognition
+  #   Institution: Recognition
+  #   Year: 2024
+Education:
+  - Name: Bachelor Degree Engineering in Computer Systems
+    Institution: Universidad del Vallde de México
+    Location: Guadalajara, JAL, México
+    Year: 2008

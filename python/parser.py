@@ -8,11 +8,17 @@ from datetime import datetime
 from fpdf import FPDF
 from yaml.loader import SafeLoader
 
+import sys
+
 cvData = []
 version = '2.0.0'
+inputCv = 'cv.yaml'
+
+if len(sys.argv) > 1:
+	inputCv = sys.argv[1]
 
 # Open the file and load the file
-with open('cv.yaml') as f:
+with open(inputCv) as f:
 	cvData = yaml.load(f, Loader=yaml.FullLoader)
 
 class PDF(FPDF):
@@ -63,8 +69,8 @@ class PDF(FPDF):
 		self.Title = 'Resume py Parser by Nina Code'
 
 		self.Job = cvData.get('Job', [])
-		self.Certification = cvData.get('Certification', [])
-		self.Recognition = cvData.get('Recognition', [])
+		self.Certification = cvData.get('Certification', []) or []
+		self.Recognition = cvData.get('Recognition', []) or []
 		self.Education = cvData.get('Education', [])
 
 	def header(self):
@@ -188,7 +194,8 @@ class PDF(FPDF):
 				labelWidth = math.ceil(self.get_string_width(labelName))
 				self.cell(labelWidth, 5, labelName, 0, 0, 'L')
 				self.set_font('OpenSans', '', 10)
-				self.cell(60 - labelWidth, 5, str(data[item]), 0, 1, 'L')
+				# self.cell(60 - labelWidth, 5, str(data[item]), 0, 1, 'L')
+				self.multi_cell(60 - labelWidth, 5, str(data[item]), 0, 'L')
 		else:
 			self.set_x(5)
 			self.set_font('OpenSans', '', 10)

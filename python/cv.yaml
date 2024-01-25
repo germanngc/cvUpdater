@@ -2,7 +2,7 @@ Information:
   Name: Germán González
   FullName: Germán Noé González Cuevas
   Phone: +52 33 3902 5911
-  RoleName: Sr DevSecOps at FICO
+  RoleName: Sr DevOps Enablement Engineer
   Email: germanngc@gmail.com
   Location: Zapopan, Jalisco, MEX.
   Summary: "I'm an experience engineer with more than 13 years on the IT field, focused now days on Cloud Infrastructure and CI/CD, with a full and strong background on development, specially on web applications and shell scripting. I'm a team player, always looking for the best solution for the problem, and always looking for the best way to do things. I'm a fast learner, and I'm always looking for new challenges."
@@ -12,7 +12,7 @@ Information:
     Nacionality: Mexican
     PassportExp: 2030
     VisaExp: 2032
-    YearsExp: 13 Years
+    YearsExp: 14 Years
   Contact:
     Email: germanngc@gmail.com
     Phone: +52 33 3902 5911
@@ -23,7 +23,6 @@ Information:
     LinkedIn: https://linkedin.com/in/germanngc/
     Github: https://github.com/germanngc
   Skills:
-    - +13 Years of Experience on IT Services
     - ITIL v3
     - ITSM
     - PaaS
@@ -37,6 +36,9 @@ Information:
     - Logging
     - Monitoring
   Technologies:
+    - Stripe
+    - Github Workflows
+    - Github Actions
     - Amazon Web Services (AWS)
     - Jenkins
     - Chef
@@ -59,10 +61,24 @@ Information:
     - HardwareList
 Job:
   - Company: FICO
+    Title: Sr DevOps Enablement Engineer
+    Type: Full Time
+    Start: 2023-07-03
+    End: Current
+    Location: San Jose, CA, USA
+    Description: "Working in a centralized team that supports multiple product development teams to enable and improve all CI/CD workflows. Work across a compass of technologies and mix hands-on development and people-focused enablement, providing both technical leadership as well as strategic direction. Transforming code development and testing capabilities into a continuous and efficient end-to-end quality engineering function by using quality processes, tools, and methodologies, significantly improving control, accuracy, and integrity. Creating a more predictive and intelligent testing approaches based on automation and innovative testing products and solutions. Automating product and infrastructure, leveraging modern scripting frameworks to eliminate human touch-points in the testing process."
+    Activities:
+      - Enablement
+      - Continous Integration
+      - Continous Deployment
+      - Security
+      - Testing
+      - Worflows and Actions
+  - Company: FICO
     Title: Sr DevSecOps
     Type: Full Time
     Start: 2021-11-01
-    End: Current
+    End: 2023-06-30
     Location: San Jose, CA, USA
     Description: "Moving into new challanged withtin the company, taking steps on the continuos integration and beyond, implementing security controls to move all the Development Lifecycle into the highway to production to automate and ensure the application security."
     Activities:
@@ -195,6 +211,12 @@ Job:
       - Coordinate with the local authorities
       - Drive and settle on the next town
 Certification:
+  - Name: Stripe Certified Associate Developer
+    Institution: Stripe
+    Year: 2023
+  - Name: The Complete GitHub Actions & Workflows Guide
+    Institution: Udemy
+    Year: 2023
   - Name: HashiCorp Certified Terraform Associate 2023
     Institution: Udemy
     Year: 2023
