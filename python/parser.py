@@ -144,14 +144,14 @@ class PDF(FPDF):
 		self.cell(cellSizeLocation, 6, self.Location, 0, 0, 'L', 0)
 		self.ln()
 
-		self.set_x(5)
-		self.set_font('OpenSansBold', '', 16)
-		self.cell(200, 6, "Summary", 0, 1, 'L', 0)
+		# self.set_x(5)
+		# self.set_font('OpenSansBold', '', 16)
+		# self.cell(200, 6, "Summary", 0, 1, 'L', 0)
 
-		self.set_x(5)
-		self.set_font('OpenSansLight', '', 10)
-		self.multi_cell(200, 6, self.Summary, 0, 'L', 0)
-		self.ln()
+		# self.set_x(5)
+		# self.set_font('OpenSansLight', '', 10)
+		# self.multi_cell(200, 6, self.Summary, 0, 'L', 0)
+		# self.ln()
 
 		self.ln()
 		self.mainHeadY = self.get_y()
@@ -215,6 +215,18 @@ class PDF(FPDF):
 			self.add_page()
 			self.set_x(xMarker)
 
+		self.set_x(xMarker)
+		self.set_font('OpenSansBold', '', 16)
+		self.cell(140 + (reversedXMarker + 5), 8, "Summary", 0, 1, 'L', 0)
+
+		self.set_x(xMarker)
+		self.set_font('OpenSansLight', '', 10)
+		self.multi_cell(140 + (reversedXMarker - 5), 6, str(self.Summary), 0, 'J')
+		# self.multi_cell(200, 6, self.Summary, 0, 'L', 0)
+		self.ln()
+
+		self.set_x(xMarker)
+		self.set_font('OpenSansBold', '', 16)
 		self.cell(140 + (reversedXMarker + 5), 8, 'Work Experience', 0, 1, 'L', 0)
 		self.ln(8)
 
@@ -297,41 +309,51 @@ class PDF(FPDF):
 		self.cell(130 + (reversedXMarker - 5), 8, 'Certifications', 0, 1, 'L', 0)
 		self.ln(8)
 
+		getY = self.get_y()
+
 		self.set_x(xMarker)
 		self.set_font('OpenSansBold', '', 10)
 		self.cell(55 + ((reversedXMarker - 5) / 2), 6, str('Certification'), 'B', 0, 'L')
 		self.cell(55 + ((reversedXMarker - 5) / 2), 6, str('Insititution'), 'B', 0, 'L')
-		self.cell(20, 6, str('Year'), 'B', 1, 'L')
+		self.cell(20, 6, str('Year') + ": " + str(getY), 'B', 1, 'L')
 		self.ln(2)
 		self.set_font('OpenSans', '', 10)
+
+		anchorY = self.get_y()
+
+		if anchorY > 250:
+			self.add_page()
+			anchorY = 11
 
 		for item in self.Certification:
 			institution = item.get('Institution', 'Unknown')
 			name = item.get('Name', 'Unknown')
 			year = item.get('Year', 'Unknown')
 
-			getY = self.get_y()
-			highY = getY
 			xMarker = 70 if self.page_no() == 1 else 5
 			reversedXMarker = 5 if self.page_no() == 1 else 70
 
-			self.set_xy(xMarker, getY)
-			self.multi_cell(55 + ((reversedXMarker - 5) / 2), 4, str(name), 0, 'L')
-			highY = highY if highY > self.get_y() else self.get_y()
+			self.set_xy(xMarker, anchorY)
+			self.multi_cell(55 + ((reversedXMarker - 5) / 2), 4, str(name) + ": " + str(anchorY), 0, 'L')
+			#highY = highY if highY > self.get_y() else self.get_y()
+			#highY = highY if highY > 250 else -15
 
-			self.set_xy(xMarker + 55 + ((reversedXMarker - 5) / 2), getY)
-			self.multi_cell(55 + ((reversedXMarker - 5) / 2), 4, str(institution), 0, 'L')
-			highY = highY if highY > self.get_y() else self.get_y()
+			self.set_xy(xMarker + 55 + ((reversedXMarker - 5) / 2), anchorY)
+			self.multi_cell(55 + ((reversedXMarker - 5) / 2), 4, str(institution) + ": " + str(anchorY), 0, 'L')
+			# highY = highY if highY > self.get_y() else self.get_y()
+			# highY = highY if highY > 250 else -15
 
-			self.set_xy(xMarker + 55 + 55 + ((reversedXMarker - 5) / 2) + ((reversedXMarker - 5) / 2), getY)
-			self.multi_cell(20, 4, str(year), 0, 'L')
-			highY = highY if highY > self.get_y() else self.get_y()
+			self.set_xy(xMarker + 55 + 55 + ((reversedXMarker - 5) / 2) + ((reversedXMarker - 5) / 2), anchorY)
+			self.multi_cell(20, 4, str(year) + ": " + str(anchorY), 0, 'L')
+			# highY = highY if highY > self.get_y() else self.get_y()
 
-			if highY > 250:
+			anchorY = self.get_y()
+
+			if anchorY > 250:
 				self.add_page()
-				highY = 11
+				anchorY = 11
 
-			self.set_xy(xMarker, highY)
+			# self.set_xy(xMarker, highY)
 			self.ln(1)
 
 		xMarker = 70 if self.page_no() == 1 else 5
