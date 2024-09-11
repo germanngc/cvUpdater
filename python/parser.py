@@ -334,17 +334,17 @@ class PDF(FPDF):
 			reversedXMarker = 5 if self.page_no() == 1 else 70
 
 			self.set_xy(xMarker, anchorY)
-			self.multi_cell(55 + ((reversedXMarker - 5) / 2), 4, str(name) + ": " + str(anchorY), 0, 'L')
+			self.multi_cell(55 + ((reversedXMarker - 5) / 2), 4, str(name), 0, 'L')
 			#highY = highY if highY > self.get_y() else self.get_y()
 			#highY = highY if highY > 250 else -15
 
 			self.set_xy(xMarker + 55 + ((reversedXMarker - 5) / 2), anchorY)
-			self.multi_cell(55 + ((reversedXMarker - 5) / 2), 4, str(institution) + ": " + str(anchorY), 0, 'L')
+			self.multi_cell(55 + ((reversedXMarker - 5) / 2), 4, str(institution), 0, 'L')
 			# highY = highY if highY > self.get_y() else self.get_y()
 			# highY = highY if highY > 250 else -15
 
 			self.set_xy(xMarker + 55 + 55 + ((reversedXMarker - 5) / 2) + ((reversedXMarker - 5) / 2), anchorY)
-			self.multi_cell(20, 4, str(year) + ": " + str(anchorY), 0, 'L')
+			self.multi_cell(20, 4, str(year), 0, 'L')
 			# highY = highY if highY > self.get_y() else self.get_y()
 
 			anchorY = self.get_y()
