@@ -12,9 +12,9 @@ Information:
     Birthday: Jun/22/1987
     Location: Zapopan, Jalisco, MEX.
     Nacionality: Mexican
-    PassportExp: 2030
-    VisaExp: 2032
-    YearsExp: 15 Years
+    Passport: 2030
+    USA Visa Exp: 2032
+    Experience: +15 Years
   Contact:
     Email: germanngc@gmail.com
     Phone: +52 33 3902 5911
@@ -22,13 +22,14 @@ Information:
     Spanish: Native
     English: Fluent
   Social:
-    LinkedIn: https://linkedin.com/in/germanngc/
+    LinkedIn: https://linkedin.com/in/germanngc
     GitHub: https://github.com/germanngc
   Skills:
     - DevOps
     - DevSecOps
     - Full Stack Developer
     - Scripting
+    - SSO
     - ITIL v3
     - ITSM
     - PaaS
@@ -46,6 +47,8 @@ Information:
     - Chef
     - Ansible
     - Terraform
+    - IAM
+    - Okta
     - Docker
     - K8s
     - SQL
@@ -101,13 +104,15 @@ Job:
     Start: 2020-02-01
     End: 2021-11-01
     Location: San Jose, CA, USA
-    Description: "Working in a multidisciplinary team, I’ve worked with different tools and applications, such proprietary or third-party software and core OS systems, building, \
+    Description: "Working in a multidisciplinary team, I've worked with different tools and applications, such proprietary or third-party software and core OS systems, building, \
       maintaining and supporting with on premise infrastructure or in public cloud in AWS. Most of the tools used on the different projects include but not limited to: Bitbucket, \
-      Jira, Jboss, Puppet, Foreman, Okta, AppD, Jenkins, Thousand Eyes, AWS , Opeshift and others."
+      Jira, Jboss, Puppet, Foreman, Okta, AppD, Jenkins, Thousand Eyes, AWS , Opeshift and others. Working within the boundries and maintaining the IAM using Okta for the Org with \
+      Employees and Customers."
     Activities:
       - Planning
       - Deploy
       - Support
+      - IAM and SSO
       - Collaboration
       - Documentation
   - Company: Noosa Labs Inc.
