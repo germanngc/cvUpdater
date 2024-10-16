@@ -315,7 +315,7 @@ class PDF(FPDF):
 		self.set_font('OpenSansBold', '', 10)
 		self.cell(55 + ((reversedXMarker - 5) / 2), 6, str('Certification'), 'B', 0, 'L')
 		self.cell(55 + ((reversedXMarker - 5) / 2), 6, str('Insititution'), 'B', 0, 'L')
-		self.cell(20, 6, str('Year') + ": " + str(getY), 'B', 1, 'L')
+		self.cell(20, 6, str('Year'), 'B', 1, 'L')
 		self.ln(2)
 		self.set_font('OpenSans', '', 10)
 

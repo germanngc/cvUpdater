@@ -50,7 +50,8 @@ Information:
     - IAM
     - Okta
     - Docker
-    - K8s
+    - K8s / Kubernetes
+    - EKS
     - SQL
     - MySQL
     - NonSQL
