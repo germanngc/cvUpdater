@@ -1,3 +1,5 @@
 fpdf
 pyyaml
 python-dateutil
+matplotlib
+reportlab

@@ -4,11 +4,14 @@ from dateutil.parser import parse
 import math
 import yaml
 
-from datetime import datetime
 from fpdf import FPDF
 from yaml.loader import SafeLoader
 
 import sys
+import os
+import time
+
+from utils.charts import radar_chart
 
 cvData = []
 version = '2.0.0'
@@ -217,17 +220,45 @@ class PDF(FPDF):
 
 		self.set_x(xMarker)
 		self.set_font('OpenSansBold', '', 16)
-		self.cell(140 + (reversedXMarker + 5), 8, "Summary", 0, 1, 'L', 0)
+		self.cell(140 + (reversedXMarker + 5), 8, "Profile", 0, 1, 'L', 0)
 
 		self.set_x(xMarker)
 		self.set_font('OpenSansLight', '', 10)
 		self.multi_cell(140 + (reversedXMarker - 5), 6, str(self.Summary), 0, 'J')
-		# self.multi_cell(200, 6, self.Summary, 0, 'L', 0)
 		self.ln()
+
+		# Chart =  self.Information.get('Chart', [])
+		# Chart2 =  self.Information.get('ChartSkills', [])
+		# chartType = Chart.get('Type', False)
+		# chartType2 = Chart2.get('Type', False)
+		# chartLabels = Chart.get('Labels', [])
+		# chartLabels2 = Chart2.get('Labels', [])
+		# chartValues = Chart.get('Values', [])
+		# chartValues2 = Chart2.get('Values', [])
+
+		# if chartType is not False and chartType2 is not False:
+		# 	chart = radar_chart(chartLabels, chartValues, self.template_color['background'])
+		# 	time.sleep(1)
+		# 	chart2 = radar_chart(chartLabels2, chartValues2, self.template_color['background'])
+
+		# 	tmp_width = ((140 + (reversedXMarker - 5)) - 130) / 2
+
+		# 	self.set_x(xMarker)
+		# 	self.set_font('OpenSansBold', '', 14)
+		# 	self.cell(70 + ((reversedXMarker - 5) / 2), 4, str("Year in Positions"), 0, 0, 'C')
+		# 	self.cell(70 + ((reversedXMarker - 5) / 2), 4, str("Years in Skill"), 0, 0, 'C')
+		# 	self.ln(6)
+
+		# 	pdf.image(chart, x=(xMarker + tmp_width), y=self.get_y(), w=60, h=60)
+		# 	pdf.image(chart2, x=(xMarker + tmp_width + 70), y=self.get_y(), w=60, h=60)
+
+		# 	self.ln(60)
+		# 	os.remove(chart)
+		# 	os.remove(chart2)
 
 		self.set_x(xMarker)
 		self.set_font('OpenSansBold', '', 16)
-		self.cell(140 + (reversedXMarker + 5), 8, 'Work Experience', 0, 1, 'L', 0)
+		self.cell(140 + (reversedXMarker + 5), 8, 'Employment History', 0, 1, 'L', 0)
 		self.ln(8)
 
 		for item in self.Job:
@@ -253,8 +284,8 @@ class PDF(FPDF):
 				end = date.today()
 
 			try:
-				parse(end_string.strftime("%B/%Y"), False)
-				end_string = end_string.strftime("%B/%Y")
+				parse(end_string.strftime("%b %Y"), False)
+				end_string = end_string.strftime("%b %Y")
 			except ValueError:
 				end_string = 'Current'
 			except TypeError:
@@ -263,7 +294,7 @@ class PDF(FPDF):
 				end_string = 'Current'
 
 			try:
-				parse(start.strftime("%B/%Y"), False)
+				parse(start.strftime("%b %Y"), False)
 			except ValueError:
 				start = date.today()
 			except TypeError:
@@ -272,24 +303,26 @@ class PDF(FPDF):
 			self.set_x(xMarker)
 			self.set_font('OpenSansBold', '', 10)
 			self.cell(52 + ((reversedXMarker - 5) / 3), 4, str(title), 0, 0, 'L')
-			self.cell(35 + ((reversedXMarker - 5) / 3), 4, str(type), 0, 0, 'C')
+			# self.cell(35 + ((reversedXMarker - 5) / 3), 4, str(type), 0, 0, 'C')
+			self.cell(35 + ((reversedXMarker - 5) / 3), 4, str(''), 0, 0, 'C')
 			self.cell(52 + ((reversedXMarker - 5) / 3), 4, str(company), 0, 1, 'R')
 			self.ln(2)
 			self.set_x(xMarker)
 			self.set_font('OpenSans', '', 10)
-			self.cell(100 + (reversedXMarker - 5), 6, str(location + '   /   From ' + start.strftime("%B/%Y") + ' to ' + end_string), 'B', 0, 'L')
+			# self.cell(100 + (reversedXMarker - 5), 6, str(location + '   /   From ' + start.strftime("%B/%Y") + ' to ' + end_string), 'B', 0, 'L')
+			self.cell(100 + (reversedXMarker - 5), 6, str(start.strftime("%b %Y") + ' -- ' + end_string), 'B', 0, 'L')
 			self.cell(40, 6, self.getJobAge(start, end), 'B', 1, 'R')
 			self.ln(2)
 			self.set_x(xMarker)
 			self.set_font('OpenSansLight', '', 10)
 			self.multi_cell(140 + (reversedXMarker - 5), 6, str(description), 0, 'J')
-			self.ln(2)
-			self.set_x(xMarker)
-			self.set_font('OpenSans', '', 10)
-			self.cell(15, 6, str('Activities: '), 0, 0, 'L')
-			self.set_font('OpenSansLight', '', 10)
-			self.multi_cell(115 + (reversedXMarker - 5), 6, " / ".join(activities), 0, 'J')
-			self.ln(8)
+			self.ln(10)
+			# self.set_x(xMarker)
+			# self.set_font('OpenSans', '', 10)
+			# self.cell(15, 6, str('Activities: '), 0, 0, 'L')
+			# self.set_font('OpenSansLight', '', 10)
+			# self.multi_cell(115 + (reversedXMarker - 5), 6, " / ".join(activities), 0, 'J')
+			# self.ln(8)
 
 			if self.get_y() > 250:
 				self.add_page()

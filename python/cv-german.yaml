@@ -1,0 +1,346 @@
+Information:
+  Name: Germán González
+  FullName: Germán Noé González Cuevas
+  Phone: +52 33 1072 3661
+  RoleName: Sr DevOps Enablement Engineer
+  Email: germanngc@gmail.com
+  Location: Zapopan, Jalisco, MEX.
+  Summary: "I'm an experience engineer with more than 14 years on the IT field, focused now days on Cloud Infrastructure and CI/CD, with a full and strong background on development, \
+    specially on web applications and shell scripting. I'm a team player, always looking for the best solution for the problem, and always looking for the best way to do things. \
+    I'm a fast learner, and I'm always looking for new challenges."
+  AboutMe:
+    Birthday: Jun/22/1987
+    Location: Zapopan, Jalisco, MEX.
+    Nacionality: Mexican
+    Passport: 2030
+    USA Visa Exp: 2032
+    Experience: +15 Years
+  Contact:
+    Email: germanngc@gmail.com
+    Phone: +52 33 3902 5911
+  Languages:
+    Spanish: Native
+    English: Fluent
+  Social:
+    LinkedIn: https://linkedin.com/in/germanngc
+    GitHub: https://github.com/germanngc
+  Skills:
+    - DevOps
+    - DevSecOps
+    - Full Stack Developer
+    - Scripting
+    - SSO
+    - ITIL v3
+    - ITSM
+    - PaaS
+    - IaaS
+    - IaC
+    - Support & Troubleshooting
+    - Logging
+    - Monitoring
+  Technologies:
+    - Stripe
+    - Github Workflows
+    - Github Actions
+    - Amazon Web Services (AWS)
+    - Jenkins
+    - Chef
+    - Ansible
+    - Terraform
+    - IAM
+    - Okta
+    - Docker
+    - K8s / Kubernetes
+    - EKS
+    - SQL
+    - MySQL
+    - NonSQL
+    - PHP
+    - JavaScript
+    - Angular
+    - NodeJS
+    - TypeScrypt
+    - Python
+  AccessKeys:
+    - EmployeeTable
+    - SoftwaresList
+    - HardwareList
+  Chart:
+    Type: Radar
+    Labels: ['DevOps', 'Developer', 'Support', 'Team Lead']
+    Values: [60, 100, 60, 20]
+  ChartSkills:
+    Type: Radar
+    Labels: ['Cloud', 'Programming', 'Scripting', 'Infra', 'Networking', 'Security', 'Management']
+    Values: [70, 100, 100, 90, 80, 40, 20]
+Job:
+  - Company: FICO
+    Title: Sr DevOps Enablement Engineer
+    Type: Full Time
+    Start: 2023-07-03
+    End: 2024-10-04
+    Location: San Jose, CA, USA
+    Description: "Working in a centralized team that supports multiple product development teams to enable and improve all CI/CD workflows. Work across a compass of technologies \
+      and mix hands-on development and people-focused enablement, providing both technical leadership as well as strategic direction. Transforming code development and testing \
+      capabilities into a continuous and efficient end-to-end quality engineering function by using quality processes, tools, and methodologies, significantly improving control, \
+      accuracy, and integrity. Creating a more predictive and intelligent testing approaches based on automation and innovative testing products and solutions. Automating product \
+      and infrastructure, leveraging modern scripting frameworks to eliminate human touch-points in the testing process."
+    Activities:
+      - Enablement
+      - Continous Integration
+      - Continous Deployment
+      - Security
+      - Testing
+      - Worflows and Actions
+  - Company: FICO
+    Title: Sr DevSecOps
+    Type: Full Time
+    Start: 2021-11-01
+    End: 2023-06-30
+    Location: San Jose, CA, USA
+    Description: "Moving into new challanged withtin the company, taking steps on the continuos integration and beyond, implementing security controls to move all the Development Lifecycle \
+      into the highway to production to automate and ensure the application security."
+    Activities:
+      - Continous Integration
+      - Continous Deployment
+      - Security
+      - Deployment
+      - Pieplines
+      - Documentation
+  - Company: FICO
+    Title: Sr DevOps
+    Type: Full Time
+    Start: 2020-02-01
+    End: 2021-11-01
+    Location: San Jose, CA, USA
+    Description: "Working in a multidisciplinary team, I've worked with different tools and applications, such proprietary or third-party software and core OS systems, building, \
+      maintaining and supporting with on premise infrastructure or in public cloud in AWS. Most of the tools used on the different projects include but not limited to: Bitbucket, \
+      Jira, Jboss, Puppet, Foreman, Okta, AppD, Jenkins, Thousand Eyes, AWS , Opeshift and others. Working within the boundries and maintaining the IAM using Okta for the Org with \
+      Employees and Customers."
+    Activities:
+      - Planning
+      - Deploy
+      - Support
+      - IAM and SSO
+      - Collaboration
+      - Documentation
+  - Company: Noosa Labs Inc.
+    Title: Cloud Engineer
+    Type: Consultant / Freelance
+    Start: 2023-09-05
+    End: Current
+    Location: Paris, FRA
+    Description: "Helping the company to move from on-premise infrastructure to the cloud, using AWS as the main provider. Working with the development team to create the \
+      infrastructure as code and the CI/CD pipelines to deploy the applications. Also working with the security team to ensure the security of the applications and the infrastructure."
+    Activities:
+      - Planning
+      - Deploy
+      - Support
+      - Deliver
+      - Management
+  - Company: LimMedia
+    Title: Lead Software Development Engineer
+    Type: Consultant / Freelance
+    Start: 2022-09-01
+    End: 2024-10-25
+    Location: New York, USA
+    Description: "Working as Technical Lead for the development group to asses and validate project and create deliverables, more frequently to deliver RESTful API Applications. \
+      Involving the use of OAuth 2.0, SSO, Webhooks and Sign and Cypher implementations."
+    Activities:
+      - Software Development
+      - Infrastructure
+      - Planning
+      - Deploy
+      - Support
+      - Deliver
+      - Management
+  - Company: Nina Code
+    Title: Co-Founder
+    Type: Consultor
+    Start: 2019-01-01
+    End: Current
+    Location: Puerto Vallarta, Jal, MEX
+    Description: "Sale solutions to new clients and current ones. Planning from scratch, create suitable budgets and delivery. Find the perfect infrastructure of each project, Unix/Linux \
+      systems with Apache/Nginx, MySQL/MariaDB and PHP language and AGILE methodologies. Full Stack Developer and AWS consultor."
+    Activities:
+      - AWS Infrastructure Advisor
+      - Business Operations
+      - Technological Operations
+  - Company: Evalart
+    Title: Freelance Developer / Business Operation México
+    Type: Consultor
+    Start: 2017-09-01
+    End: 2023-09-05
+    Location: Santiago, Stg, CHL
+    Description: "Lead developer for application related to Recruitments Evaluations for IT areas mainly. Using technologies such’s a sandbox to run and execute language code such \
+      Python, Java, SQL, PHP and Others. Working in Front and Back end as a developer, but also working as first point of contact with clients on Mexico Region, managing the invoicing \
+      and billing of the application."
+    Activities:
+      - Front / Back End Development
+      - Business Operations in México
+      - Sales and Billing in México
+  - Company: ViralConnections
+    Title: Cloud Architect Adviser / DevOps / Full Stack
+    Type: Consultor
+    Start: 2017-02-01
+    End: 2019-10-01
+    Location: Panama City, Pan, PAN
+    Description: "Advisor in Cloud Technologies such as Amazon Web Services (AWS) and managing all the main projects for the business, develop, deployment and maintenance. Projects for \
+      multiple work business areas like Accounting, Marine services, Real Estates and others."
+    Activities:
+      - AWS Adviser
+      - Migrations
+      - Project Adviser
+      - Full Stack Developer
+  - Company: Antigravity Media
+    Title: Sys Engineer / DevOps / Full Stack Dev
+    Start: 2016-07-01
+    End: 2019-01-01
+    Type: Full Time
+    Location: Seatle, Was, USA
+    Description: "Handle infrastructure in the cloud, Unix/Linux environments AMI Linux, Ubuntu, CentOS, databases as MySQL, PostgreSQL and cloud storage S3 buckets, load balancing, \
+      monitoring using Amazon CloudWatch resources such disk space, CPU utilization and network, troubleshooting and maintenance of the servers. Infrastructure as a Service (IaaS) and \
+      Infrastructure as Code (IaC) working with Ruby, Chef, Jenkins, Code Ship and AWS Ops Works. Full Stack Developer for applications using primary languages Ruby on Rails, PHP, JavaScript, \
+      team lead of 3 developers in US and Mexico, supporting coordination between customers and dev team, work on enhancements, features and bug fixes, root cause analysis, post mortem \
+      reports, debug and diagnostics. Containerization and Virtualization using tools like Docker, Virtual Box and Vagrant."
+    Activities:
+      - Infrastructure Engineer
+      - Sys Admin
+      - Full Stack Developer
+      - Team Lead
+      - DevOps
+  - Company: Kaiser Permanente @ TCS
+    Title: BMC L3 Infra Support
+    Type: Full Time
+    Start: 2016-01-01
+    End: 2016-07-01
+    Location: Guadalajara, Jal, MEX
+    Description: "Trained in ITIL v3 and ITSM tools, especially in change management, in order to use BMC Remedy application for support over IBM AIX and Linux environments. Support for \
+      Dev teams within the company creating new modules for BMC. Maintenance and troubleshooting in the infrastructure and the BMC application. Review and maintain the queries for transaction \
+      in the Oracle Databases. Check availability of the nodes automatically and manually on daily basis. Debugging, diagnosing and work on root cause analysis whenever incidents arise. Work \
+      in a team with 8 team members, 1 on site, 2 nearshore and 5 offshore, always rotating any workload or issues that require continue attention. Involve in the process of the application \
+      into PaaS and working with the DevOps culture and practices."
+    Activities:
+      - Infrastructure Engineer
+      - Sys Admin
+      - WebSphere Monitoring Nodes
+      - Back End Developer
+      - Crisis Management
+      - First Point of Contact on Incidents
+  - Company: AT&T @ Amdocs @ TCS
+    Title: L2 Billing Support / Team Lead
+    Type: Full Time
+    Start: 2012-01-01
+    End: 2016-01-01
+    Location: Guadalajara, Jal, MEX
+    Description: "Project lead for all the Level 2 team members in nearshore production operations. Performing deployment task related to the billing application by AT&T. Create scripts to \
+      retrieve information from logs, monitoring the main billing application, maintenance on the data servers such compressing and cleaning logs, troubleshooting issues, querying SQL \
+      string using oracle databases. Ensure the business continuity of the billing process in the production environments working on schedule periods of on-call person and working on schedule \
+      maintenances. Introduced in the DevOps culture with the use of Repositories and version control and working with continuous deployment (CD) in the initial stages."
+    Activities:
+      - Team Lead
+      - On Call Support
+      - WebLogic deployment WAR files
+      - Schedule Maintenance Task Executor
+      - Application Support
+  - Company: Telecomunicaciones y Softwares
+    Title: Web Developer Senior
+    Type: Full Time
+    Start: 2010-01-01
+    End: 2011-10-01
+    Location: Puerto Vallarta, Jal, MEX
+    Description: "Full stack developer for multiple brands and companies, national and international. Participation in multiple project on day to day, sharing updates between team members. \
+      Handle client calls and new requirements, enhancements and bug fixes. Internal network maintenance and voice over IP (VoIP)."
+    Activities:
+      - Full Stack Developer
+      - Client first point of contact
+      - Local Network Administrator
+  - Company: Seguro Popular México (Gob Institution)
+    Title: Brigade Lead / Data Capture
+    Type: Eventual
+    Start: 2009-12-01
+    End: 2010-01-01
+    Location: Tepic, Nay, MEX
+    Description: "Coordinator in a small team of 4 members, our primary task was to travel to hard reach access locations and install temporary tents to register people into the social security \
+    system for statistics and delivery proper health plan in those locations. I was in charge of a pick- up truck, 4 laptops, finger print scanners, printers and safety personal. On every \
+    place we arrive I reached the local authority to coordinate the campaign."
+    Activities:
+      - Safety of the team members
+      - Coordinate with the local authorities
+      - Drive and settle on the next town
+Certification:
+  - Name: Stripe Certified Associate Developer
+    Institution: Stripe
+    Year: 2023
+  - Name: The Complete GitHub Actions & Workflows Guide
+    Institution: Udemy
+    Year: 2023
+  - Name: HashiCorp Certified Terraform Associate 2023
+    Institution: Udemy
+    Year: 2023
+  - Name: AWS Cloud Practitioner Certification
+    Institution: AWS Training & Certifications
+    Year: 2022
+  - Name: Puppet
+    Institution: Udemy
+    Year: 2020
+  - Name: Amazon AWS Arquitecto de Soluciones
+    Institution: Udemy
+    Year: 2019
+  - Name: Docker
+    Institution: Udemy
+    Year: 2019
+  - Name: Python
+    Institution: Udemy
+    Year: 2019
+  - Name: Lean / Six Sigma Green Belt
+    Institution: Tata Consultancy Services
+    Year: 2015
+  - Name: Solution Thinking for Breakthrough Decision
+    Institution: Tata Consultancy Services
+    Year: 2015
+  - Name: Decision Analysis and Resolution (DAR) Technics
+    Institution: Tata Consultancy Services
+    Year: 2015
+  - Name: ITIL 2011 Foundation
+    Institution: Tata Consultancy Services
+    Year: 2015
+  - Name: Political and Ideological Training
+    Institution: Universidad de Guadalajara
+    Year: 2006
+Recognition:
+  - Name: Spot Award for Performance
+    Institution: FICO
+    Year: 2023
+  - Name: Spot Award for Performance
+    Institution: FICO
+    Year: 2022
+  - Name: Spot Award for Performance
+    Institution: FICO
+    Year: 2022
+  - Name: Spot Award for Performance
+    Institution: FICO
+    Year: 2021
+  - Name: Service and Commitment Award
+    Institution: Tata Consultancy Services
+    Year: 2015
+  - Name: AMDOCS Certificate of Excellence
+    Institution: AMDOCS
+    Year: 2014
+  - Name: International Citizen of Excellence
+    Institution: Ibero-American Council of Education
+    Year: 2006
+  - Name: Diploma of Participation
+    Institution: Ibero-American Council of Education
+    Year: 2006
+  - Name: Ambassador of San Luis
+    Institution: Municipality of San Luis in Lima Perú
+    Year: 2006
+  - Name: Honorable Merits
+    Institution: Lion Clubs International in Lima Perú
+    Year: 2006
+Education:
+  - Name: Bachelor Degree Engineer in Telematics
+    Institution: Universidad de Guadalajara
+    Location: Puerto Vallarta, JAL, México
+    Year: 2009
