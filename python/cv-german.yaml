@@ -28,6 +28,7 @@ Information:
     - DevOps
     - DevSecOps
     - Full Stack Developer
+    - Backend Developer
     - Scripting
     - SSO
     - ITIL v3
@@ -61,10 +62,7 @@ Information:
     - NodeJS
     - TypeScrypt
     - Python
-  AccessKeys:
-    - EmployeeTable
-    - SoftwaresList
-    - HardwareList
+    - Tailwind CSS
   Chart:
     Type: Radar
     Labels: ['DevOps', 'Developer', 'Support', 'Team Lead']

@@ -1,0 +1,194 @@
+Information:
+  Name: Germán González
+  FullName: Germán Noé González Cuevas
+  Phone: +52 33 1072 3661
+  RoleName: Senior DevOps Engineer
+  Email: germanngc@gmail.com
+  Location: Zapopan, Jalisco, MEX.
+  Summary: "Passionate Software Developer with over 14 years in IT, specializing in PHP and Laravel \
+    (versions 9, 10, and 11). Strong experience in CI/CD pipelines, using Bitbucket Pipelines, GitHub Actions, \
+    and Jenkins to streamline deployments. Skilled in leveraging frameworks like Livewire (versions 2 and 3), \
+    JavaScript, TypeScript, and Agile methodologies to deliver scalable, maintainable solutions on AWS and other \
+    cloud environments."
+  AboutMe:
+    Birthday: Jun/22/1987
+    Location: Zapopan, Jalisco, MEX.
+    Nacionality: Mexican
+    Passport: 2030
+    USA Visa Exp: 2032
+    Experience: +15 Years
+  Contact:
+    Email: germanngc@gmail.com
+    Phone: +52 33 1072 3661
+  Languages:
+    Spanish: Native
+    English: B2
+  Social:
+    LinkedIn: https://linkedin.com/in/germanngc
+    GitHub: https://github.com/germanngc
+  Skills:
+    - "Programming & Development: PHP, Laravel (9, 10, 11), JavaScript, TypeScript"
+    - "Front-end Frameworks: Livewire (versions 2 and 3), Vue.js, Tailwind CSS"
+    - "CI/CD & Automation: Bitbucket Pipelines, GitHub Actions, Jenkins"
+    - "Cloud Deployment: AWS (EC2, S3, Lambda), Terraform, Docker"
+    - "Agile & Best Practices: Test-driven development, code reviews, Agile (Scrum/Kanban)"
+  Technologies:
+    - "CI/CD: GitHub Actions, Jenkins, Terraform"
+    - "Cloud: AWS, Terraform, Kubernetes (EKS)"
+    - "Configuration Management: Chef, Ansible"
+    - "Programming: PHP, Python, JavaScript, Typescript, NodeJS, Angular"
+    - "Database: SQL, MySQL, NonSQL"
+Job:
+  - Company: FICO
+    Title: Sr DevOps Engineer
+    Type: Full Time
+    Start: 2023-07-03
+    End: 2024-10-04
+    Location: San Jose, CA, USA
+    Description: "Collaborated with product teams to build and maintain scalable applications using PHP \
+      and Laravel. Leveraged CI/CD practices through GitHub Actions and Bitbucket Pipelines for efficient \
+      deployments and continuous integration. Implemented Agile methodologies to enhance team collaboration \
+      and project delivery. Keys: Laravel 10, Bitbucket Pipelines, AWS (S3, Lambda), TypeScript, Livewire 3, \
+      Development, CI/CD, Agile collaboration, AWS deployments"
+    Technologies: 
+      - Laravel 10
+      - Bitbucket Pipelines
+      - AWS (S3, Lambda)
+      - TypeScript
+      - Livewire 3
+    Activities: Development
+      - CI/CD
+      - Agile collaboration
+      - AWS deployments
+  - Company: Evalart
+    Title: Lead Developer & Business Operations - Mexico
+    Type: Full Time
+    Start: 2017-09-01
+    End: 2024-11-07
+    Location: Santiago de Chile, CHL
+    Description: "Instrumental in developing a recruitment evaluation platform for IT roles, incorporating \
+      automated code testing for various languages. Worked on both front and backend systems using PHP and \
+      Laravel, leading CI/CD initiatives with Bitbucket Pipelines to maintain continuous delivery. Managed client \
+      relationships, sales, and billing in the Mexican market, making a significant impact on Evalart's regional \
+      expansion. Keys: PHP, KumbiaPHP, Bitbucket Pipelines, AWS, SQL, Full stack development, CI/CD, \
+      client relations, sales and billing operations"
+    Technologies: 
+      - PHP
+      - Laravel
+      - Jenkins
+      - AWS
+      - SQL
+    Activities: 
+      - Full stack development
+      - CI/CD, client relations
+      - Sales and billing operations
+  - Company: Noosa Labs Inc.
+    Title: Cloud Engineer
+    Type: Consultant / Freelance
+    Start: 2023-09-05
+    End: 2024-11-07
+    Location: Paris, FRA
+    Description: "Migrated applications from on-premises to AWS, ensuring seamless deployments through \
+      Jenkins and Terraform. Worked closely with the development team to create Laravel-based applications \
+      and automate testing pipelines using GitHub Actions. Keys: Key Technologies: PHP, Laravel 11, \
+      Jenkins, AWS, Docker, Cloud migrations, CI/CD setup, Infrastructure as Code (IaC)"
+    Technologies:
+      - PHP
+      - Laravel 11
+      - Jenkins
+      - AWS-
+      - Docker
+    Activities: 
+      - Cloud migrations
+      - CI/CD setup
+      - Infrastructure as Code (IaC)
+  - Company: LimMedia
+    Title: Lead Software Development Engineer
+    Type: Consultant / Freelance
+    Start: 2022-09-01
+    End: 2024-10-25
+    Location: New York, USA
+    Description: "Oversaw RESTful API development in Laravel, incorporating OAuth 2.0 and SSO. Used \
+      Bitbucket Pipelines to automate tests and deployments. Collaborated on complex JavaScript \
+      integrations, implementing Agile practices to drive project efficiency and accountability. Keys: \
+      Laravel 9, JavaScript, Bitbucket Pipelines, AWS, TypeScript, API development, CI/CD, Agile \
+      project management, client collaboration"
+    Technologies: 
+      - Laravel 9, JavaScript, Bitbucket Pipelines, AWS, TypeScript
+    Activities: API development, CI/CD, Agile project management, client collaboration
+Certification:
+  - Name: Stripe Certified Associate Developer
+    Institution: Stripe
+    Year: 2023
+  - Name: The Complete GitHub Actions & Workflows Guide
+    Institution: Udemy
+    Year: 2023
+  - Name: HashiCorp Certified Terraform Associate 2023
+    Institution: Udemy
+    Year: 2023
+  - Name: AWS Cloud Practitioner Certification
+    Institution: AWS Training & Certifications
+    Year: 2022
+  - Name: Puppet
+    Institution: Udemy
+    Year: 2020
+  - Name: Amazon AWS Arquitecto de Soluciones
+    Institution: Udemy
+    Year: 2019
+  - Name: Docker
+    Institution: Udemy
+    Year: 2019
+  - Name: Python
+    Institution: Udemy
+    Year: 2019
+  - Name: Lean / Six Sigma Green Belt
+    Institution: Tata Consultancy Services
+    Year: 2015
+  - Name: Solution Thinking for Breakthrough Decision
+    Institution: Tata Consultancy Services
+    Year: 2015
+  - Name: Decision Analysis and Resolution (DAR) Technics
+    Institution: Tata Consultancy Services
+    Year: 2015
+  - Name: ITIL 2011 Foundation
+    Institution: Tata Consultancy Services
+    Year: 2015
+  - Name: Political and Ideological Training
+    Institution: Universidad de Guadalajara
+    Year: 2006
+Recognition:
+  - Name: Spot Award for Performance
+    Institution: FICO
+    Year: 2023
+  - Name: Spot Award for Performance
+    Institution: FICO
+    Year: 2022
+  - Name: Spot Award for Performance
+    Institution: FICO
+    Year: 2022
+  - Name: Spot Award for Performance
+    Institution: FICO
+    Year: 2021
+  - Name: Service and Commitment Award
+    Institution: Tata Consultancy Services
+    Year: 2015
+  - Name: AMDOCS Certificate of Excellence
+    Institution: AMDOCS
+    Year: 2014
+  - Name: International Citizen of Excellence
+    Institution: Ibero-American Council of Education
+    Year: 2006
+  - Name: Diploma of Participation
+    Institution: Ibero-American Council of Education
+    Year: 2006
+  - Name: Ambassador of San Luis
+    Institution: Municipality of San Luis in Lima Perú
+    Year: 2006
+  - Name: Honorable Merits
+    Institution: Lion Clubs International in Lima Perú
+    Year: 2006
+Education:
+  - Name: Bachelor Degree Engineer in Telematics
+    Institution: Universidad de Guadalajara
+    Location: Puerto Vallarta, JAL, México
+    Year: 2009
