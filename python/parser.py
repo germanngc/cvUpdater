@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from datetime import date
 from datetime import datetime
 from dateutil.parser import parse
@@ -176,7 +178,7 @@ class PDF(FPDF):
 		self.leftColBlock(self.Social, 'SOCIAL', 'table')
 
 		# Technologies Block
-		self.leftColBlock(self.Technologies, 'TECHNOLOGIES', 'inline')
+		# self.leftColBlock(self.Technologies, 'TECHNOLOGIES', 'inline')
 
 		# Skills Block
 		self.leftColBlock(self.Skills, 'SKILLS', 'inline')
@@ -258,6 +260,16 @@ class PDF(FPDF):
 
 		self.set_x(xMarker)
 		self.set_font('OpenSansBold', '', 16)
+		self.cell(140 + (reversedXMarker + 5), 8, 'Tools and Technologies', 0, 1, 'L', 0)
+		self.ln(2)
+
+		self.set_x(xMarker)
+		self.set_font('OpenSansLight', '', 10)
+		self.multi_cell(140 + (reversedXMarker - 5), 6, " / ".join(self.Technologies), 0, 'J')
+		self.ln(8)
+
+		self.set_x(xMarker)
+		self.set_font('OpenSansBold', '', 16)
 		self.cell(140 + (reversedXMarker + 5), 8, 'Employment History', 0, 1, 'L', 0)
 		self.ln(8)
 
@@ -316,12 +328,12 @@ class PDF(FPDF):
 			self.set_x(xMarker)
 			self.set_font('OpenSansLight', '', 10)
 			self.multi_cell(140 + (reversedXMarker - 5), 6, str(description), 0, 'J')
-			# self.ln(6)
-			self.set_x(xMarker)
-			self.set_font('OpenSans', '', 10)
-			self.cell(15, 6, str('Activities: '), 0, 0, 'L')
-			self.set_font('OpenSansLight', '', 10)
-			self.multi_cell(115 + (reversedXMarker - 5), 6, " / ".join(activities), 0, 'J')
+			## self.ln(6)
+			# self.set_x(xMarker)
+			# self.set_font('OpenSans', '', 10)
+			# self.cell(15, 6, str('Activities: '), 0, 0, 'L')
+			# self.set_font('OpenSansLight', '', 10)
+			# self.multi_cell(115 + (reversedXMarker - 5), 6, " / ".join(activities), 0, 'J')
 			self.ln(8)
 
 			if self.get_y() > 250:
