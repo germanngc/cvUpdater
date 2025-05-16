@@ -1,0 +1,644 @@
+Information:
+  Name: Germán González
+  FullName: Germán Noé González Cuevas
+  Phone: +52 33 1072 3661
+  RoleName: Platform Architect
+  Email: germanngc@gmail.com
+  Location: Guadalajara, Jalisco, MEX.
+  Summary: "Experienced professional in DevOps and software development with a strong focus on automation, security, and cloud \
+    infrastructure with over 15 years of experience. Expertise includes implementing end-to-end CI/CD workflows, enhancing \
+    application security, and optimizing deployment pipelines. Proficient in managing multidisciplinary projects, supporting \
+    both on-premise and cloud environments (AWS), and leveraging a wide range of tools and methodologies to streamline \
+    processes. Skilled in planning, delivering, and maintaining scalable solutions, with hands-on experience in API \
+    development, infrastructure advisory, and business operations. Demonstrated success in integrating security practices, \
+    driving innovation, and delivering high-quality technical solutions in dynamic and collaborative environments."
+  AboutMe:
+    # Birthday: Jun/22/1987
+    Location: Guadalajara, Jalisco, MEX.
+    Nacionality: Mexican
+    Passport: 2030
+    USA Visa: 2032
+    Experience: +15 Years
+  Contact:
+    Email: germanngc@gmail.com
+    Phone: +52 33 3902 5911
+  Languages:
+    Spanish: Native
+    English: Fluent
+  Social:
+    LinkedIn: https://linkedin.com/in/germanngc
+    GitHub: https://github.com/germanngc
+    Credly: https://www.credly.com/users/germanngc
+  Skills:
+    - name: "Programming Languages and Frameworks"
+      skill: "PHP, JavaScript, TypeScript, Python, SQL, Angular, NodeJS."
+    - name: "CI/CD & DevOps"
+      skill: "Jenkins, GitHub Actions, Bitbucket Pipelines, GitLab CI/CD, Terraform, Docker, Kubernetes, Ansible, Puppet, Artifactory, Jfrog, Helm, YAML, Okta, Openssl, Monitoring."
+    - name: "Cloud Platforms"
+      skill: "Amazon Web Services (AWS). Microsoft Azure DevOps."
+    - name: "OS & WebServers"
+      skill: "Windows, Linux, Mac, IIS, Apache, Nginx."
+    - name: "Security Tools"
+      skill: "Blackduck, SonarQube, Checkmarx."
+    - name: "DBMS"
+      skill: "MySQL, Oracle, SQLite, PostgreSQL, MSSQL, MongoDB, DynamoDB."
+  SkillsOld:
+    - Agile methodologies
+    - Architecture Descision Records (ADR)
+    - Backend developer
+    - Bash scripting
+    - Cloud infrastructure
+    - Cloud technologies
+    - Consultor
+    - Containerization
+    - Credit card processing
+    - CRM
+    - Cyber security
+    - Debugging
+    - Diagnostic
+    - Full stack developer
+    - Git
+    - GitHub
+    - GitLab
+    - HIPAA
+    - Hospital systems
+    - Inventoring systems
+    - ITIL v3
+    - ITSM
+    - Medical records
+    - Medical systems
+    - Monitoring
+    - Networking
+    - OAuth 2.0
+    - OnCall
+    - Onsite infrastructure
+    - Operations
+    - Orders and checkout processing systems
+    - Patient records
+    - PCI
+    - Pipelines
+    - Post Mortem Reports
+    - Root Cause Analysis
+    - Software Development Lifecycle
+    - SQL scripting
+    - Team Lead
+    - Troubleshooting
+    - Virtualization
+    - Warehousing systems
+  Technologies:
+    - Apache
+    - AppD
+    - Artifactory
+    - AWS
+    - BigCommerce
+    - Bitbucket
+    - Bitbucket Pipelines
+    - Blackduck
+    - BMC Remedy
+    - CDN (Content Delivery Network)
+    - CentOS
+    - Certificates
+    - Checkmarx
+    - Chef
+    - CloudWatch
+    - CodeShip
+    - Cypher
+    - Debian
+    - Docker
+    - DynamoDB
+    - EC2
+    - ECS
+    - EKS
+    - ERP
+    - Foreman
+    - GitHub Actions
+    - Helm
+    - HTML
+    - IBM AIX
+    - Java
+    - JavaScript
+    - JBoss
+    - Jenkins
+    - JFrog
+    - Jira
+    - JSON
+    - Kubernetes
+    - Lambdas
+    - Load Balancing
+    - Mac
+    - MariaDB
+    - Microsoft 360
+    - MySQL
+    - Nginx
+    - Node.js
+    - Notion
+    - Okta
+    - Oktokit
+    - OnCall
+    - OpenShift
+    - Oracle DB
+    - PaaS
+    - PostgreSQL
+    - Probot
+    - Puppet
+    - Python
+    - RDS
+    - RESTful
+    - Roles Anywhere
+    - Ruby
+    - Ruby on Rails
+    - S3
+    - SaaS
+    - Serverless
+    - ServiceNow
+    - Shopify
+    - Slack
+    - SonarQube
+    - SQL
+    - SSL
+    - SSO
+    - Tailwind CSS
+    - Teams
+    - Terraform
+    - Thousand Eyes
+    - TypeScript
+    - Ubuntu
+    - Unix/Linux
+    - Vagrant
+    - Virtual Box
+    - VoIP
+    - Webhooks
+    - Windows
+    - Wix Studio
+    - WooCommerce
+    - YAML
+  Chart:
+    Type: Radar
+    Labels: ['DevOps', 'Developer', 'Support', 'Team Lead']
+    Values: [60, 100, 60, 20]
+  ChartSkills:
+    Type: Radar
+    Labels: ['Cloud', 'Programming', 'Scripting', 'Infra', 'Networking', 'Security', 'Management']
+    Values: [70, 100, 100, 90, 80, 40, 20]
+Job:
+  - Company: Nina Code 
+    Title: Platform Architect
+    Type: Freelancer
+    Start: 2024-10-07
+    End: Current
+    Location: Guadalajara, Jal, MEX
+    Description: "Nina Code SAS de CV  is a technology company based in Zapopan, Jalisco, Mexico, specializing in software development and IT services. The company offers a wide range of solutions, including Software Development, Staff Augmentation, Cloud Infrastructure and Web Design."
+    Activities:
+      - Working on diverse freelance projects of varying complexity and maturity.
+      - Regularly collaborated with clients to design scalable solutions on AWS, utilizing EKS, S3, and Lambda.
+      - Focusing on DevOps practices, including continuous integration/continuous deployment (CI/CD) using languages like Groovy and YAML.
+      - Designing and managing cloud-based solutions for scalability and reliability.
+      - Implementing robust security measures and ensuring secure networking practices.
+      - Wrote automation scripts using Python and Bash, reducing manual workload and increasing deployment efficiency.
+      - Creating connectors and APIs to enable seamless integration between systems.
+      - Providing end-to-end software implementation services tailored to client needs.
+      - Monitored serverless application performance using Datadog, ensuring uptime and quick issue resolution for client projects.
+      - Configured and maintained GitHub Actions workflows for seamless integration and deployment, reducing build errors by 20%.
+      - Created and managed deployment templates in Helm, streamlining CI/CD pipelines for Kubernetes applications.
+    Technologies:
+      - AWS Cloud
+      - Backend Development
+      - Bitbucket
+      - Bitbucket Pipelines
+      - CI/CD
+      - Containers and Microservices
+      - Datadog
+      - Frontend Development
+      - Github
+      - Github Actions
+      - GitLab
+      - GitLab
+      - Kubernetes (EKS)
+      - PCI and HIPAA
+      - Scripting and Monitoring
+      - YAML
+  - Company: FICO
+    Title: Sr DevOps Enablement Engineer
+    Type: Full Time
+    Start: 2020-02-01
+    End: 2024-10-04
+    Location: San Jose, CA, USA
+    Description: "FICO  is known for its credit scoring system, which is widely used by lenders to assess the creditworthiness of individuals. The FICO Score is based on various factors such as payment history, credit utilization, length of credit history, new credit, and credit mix."
+    Activities:
+      - Supported multiple product teams by maintaining CI/CD pipelines using Jenkins, GitHub Actions, and Puppet in languages as Groovy, Ruby and YAML.
+      - Providing technical leadership and strategic direction to ensure alignment across teams.
+      - Transforming development and testing practices into a streamlined, continuous quality engineering function.
+      - Ensuring accuracy, integrity, and control through robust quality processes, tools, and methodologies.
+      - Collaborating with cross-functional teams to refine CI/CD pipelines and improve operational efficiency.
+      - Conducted automated security scans with Checkmarx and SonarQube, ensuring compliance with internal security standards.
+      - Leveraging a variety of technologies to mix hands-on development with people-focused enablement.
+      - Developing automated testing frameworks and scripts to enhance testing capabilities.
+      - Using modern scripting frameworks to automate processes and reduce manual touchpoints in infrastructure and testing.
+      - Strategically implementing testing solutions that improve predictability and efficiency in quality assurance.
+      - Wrote and maintained Helm charts for deploying applications on Kubernetes (EKS), enabling consistent and repeatable deployments.
+      - Monitored infrastructure logs and application events with AWS CloudWatch, responding to critical incidents in real-time.
+      - Used Okta for managing secure authentication and authorization workflows, improving identity and access management.
+    Technologies:
+      - AppD
+      - AWS
+      - CI/CD
+      - CyberSecurity
+      - Docker
+      - ECS
+      - EKS
+      - Foreman
+      - Github
+      - GitHub Actions
+      - Helm
+      - ITSM
+      - Jboss
+      - Jenkins
+      - Jira
+      - Kubernetes
+      - Okta
+      - Openshift
+      - PCI
+      - Puppet
+      - Ruby
+      - Scripting
+      - ServiceNow
+      - Thousand Eyes
+      - YAML
+  # - Company: FICO
+  #   Title: Sr DevSecOps
+  #   Type: Full Time
+  #   Start: 2021-11-01
+  #   End: 2023-06-30
+  #   Location: San Jose, CA, USA
+  #   Description: "Taking steps on the continuos integration and beyond, implementing security controls to move \
+  #     all the Development Lifecycle into the highway to production to automate and ensure the application security. \
+  #     Working with a wide range of tools and technologies, including AWS, Terraform, Jenkins, JFrog, DynamoDB, S3, \
+  #     and Networking, alongside security tools like Blackduck, SonarQube, and Checkmarx. A core aspect of my \
+  #     contribution has been consistently sharing ideas and improvements, fostering a collaborative environment \
+  #     that enhances our processes and security posture."
+  #   Activities:
+  #     - Continous Integration
+  #     - Continous Deployment
+  #     - Security
+  #     - Deployment
+  #     - Pieplines
+  #     - Documentation
+  # - Company: FICO
+  #   Title: Sr DevOps
+  #   Type: Full Time
+  #   Start: 2020-02-01
+  #   End: 2021-11-01
+  #   Location: San Jose, CA, USA
+  #   Description: "Working in a multidisciplinary team, I've worked with different tools and applications, \
+  #     such proprietary or third-party software and core OS systems, building, maintaining and supporting \
+  #     with on premise infrastructure or in public cloud in AWS, documenting architectural descision as ADR. \
+  #     Most of the tools used on the different projects include but not limited to: Bitbucket, Jira, Jboss, \
+  #     Puppet, Foreman, Okta, AppD, Jenkins, Thousand Eyes, AWS , Opeshift and others. Working within the \
+  #     boundries and maintaining the IAM using Okta for the Org with Employees and Customers."
+  #   Activities:
+  #     - Planning
+  #     - Deploy
+  #     - Support
+  #     - IAM and SSO
+  #     - Collaboration
+  #     - Documentation
+  - Company: Noosa Labs Inc.
+    Title: Cloud Engineer
+    Type: Freelancer
+    Start: 2023-09-05
+    End: Current
+    Location: Florida, USA
+    Description: "Noosa Labs Inc. is a technology company based in Florida, USA, specializing in acquiring and managing technology companies, principally in the SaaS space."
+    Activities:
+      - Led the migration of the infrastructure from static instance to a more dynamic flow.  
+      - Implemented fully Software Development Lifecycle (SDLC) and CI/CD pipelines.
+      - Created the best pipelines to deploy the applications.
+      - Used tools and framewokrs like Bitbucket Cloud, Bitbucket pipelines, Notion, AWS, Terraform, Docker, ECS, IAM, S3, RDS, and others.
+      - Worked alongside with the security team to ensure the security of the applications and the infrastructure.
+      - Documented all the process and the architectural descisions as ADR.
+    Technologies:
+      - AWS
+      - Bitbucket
+      - Bitbucket Pipelines
+      - CI/CD
+      - Docker
+      - ECS
+  - Company: LimMedia
+    Title: Part-time Consulting as Software Development Engineer
+    Type: Freelancer
+    Start: 2022-09-01
+    End: 2024-10-25
+    Location: New York, USA
+    Description: "LimMedia - a digital media and technology company specializing in media solutions, content creation, and software development. Its services include creating APIs and supporting digital infrastructure, with a focus on innovative media-related projects. They work across different technical stacks to deliver tailored solutions for their clients, including content management and delivery platforms."
+    Activities:
+      - Led the development and deployment of RESTful APIs using Node.js and Python, ensuring seamless integration with client systems.
+      - Managed application performance monitoring and troubleshooting with Datadog, maintaining optimal service uptime.
+      - Developed and deployed infrastructure on AWS, utilizing EC2, S3, and CloudFormation for scalable and cost-effective solutions.
+      - Worked with encryption protocols and compliance standards like PCI and HIPAA, ensuring secure handling of sensitive data.
+      - Supported OAuth 2.0 and SSO integrations for client projects, enabling secure and efficient authentication workflows.
+      - Conducted technical code reviews using GitHub, ensuring high code quality and adherence to best practices.
+      - Provided technical guidance to the team on B2B integrations using Webhooks and API Gateways.
+    Technologies:
+      - AWS
+      - B2B Integrations
+      - Backend Development
+      - Credit Card Transactions
+      - Datadog
+      - Encryption and Ciphers
+      - Github
+      - OAuth 2.0
+      - PCI and HIPAA
+      - RESTful
+      - Software Development Tools
+      - SSL
+      - SSO
+      - Webhooks
+  - Company: Freelancer
+    Title: Full Stack Developer/Cloud Architect
+    Type: Freelancer
+    Start: 2016-07-01
+    End: 2020-02-01
+    Location: Remote
+    Description: "As a freelancer, I worked on a variety of projects, ranging from full-stack development to cloud architecture. I collaborated with clients to design and implement scalable solutions, leveraging cloud technologies and best practices to optimize performance and security. My responsibilities included developing APIs, managing infrastructure, and ensuring seamless integration between systems. Some of the projects for references were: Evalart.com, ViralConnections.net, AntigravityMedia"
+    Activities:
+      - Developed and maintained full-stack applications using Ruby on Rails, PHP, and JavaScript, ensuring high-quality code and performance.
+      - Designed and implemented cloud infrastructure on AWS, utilizing services like EC2, S3, and RDS for scalable and reliable solutions.
+      - Created RESTful APIs to enable seamless communication between applications, enhancing data flow and system integration.
+      - Implemented CI/CD pipelines using Jenkins and GitHub Actions, automating deployment processes and ensuring code quality.
+      - Conducted security assessments and implemented encryption protocols to protect sensitive data and ensure compliance with industry standards.
+      - Collaborated with cross-functional teams to refine project requirements and deliver solutions that meet client needs.
+      - Provided technical guidance and support to clients on cloud architecture, security best practices, and application development.
+    Technologies:
+      - AWS
+      - Bash
+      - Billing and Invoicing
+      - CI/CD
+      - Cloud Infrastructure
+      - Datadog
+      - JavaScript
+      - Linux Admin
+      - NodeJs
+      - PHP
+      - Product and Customer Support
+      - Python
+      - Ruby
+      - Shopify
+      - Twilio
+      - VoOvIP and IVR
+      - WordPress
+  # - Company: Nina Code
+  #   Title: Co-founder
+  #   Type: Shareholder
+  #   Start: 2019-01-01
+  #   End: 2024-02-16
+  #   Location: Puerto Vallarta, Jal, MEX
+  #   Description: "Working as consultor when needed, and as a shareholder, I'm in charge of the \
+  #     infrastructure and the development team. In charge of budget and delivery of the projects. \
+  #     Having the responsability with the customers and shareholders to deliver the best solution for \
+  #     their needs. Capaciting the team in new technologies and methodologies."
+  #   Activities:
+  #     - AWS Infrastructure Advisor
+  #     - Business Operations
+  #     - Technological Operations
+  # - Company: Evalart
+  #   Title: Freelance Developer / Business Operation México
+  #   Type: Consultor
+  #   Start: 2017-09-01
+  #   End: 2023-09-05
+  #   Location: Santiago, Stg, CHL
+  #   Description: "Lead developer for application related to Recruitments Evaluations for IT areas mainly. \
+  #     Using technologies such's a sandbox to run and execute language code such Python, Java, SQL, PHP \
+  #     and Others. Working in Front and Back end as a developer, but also working as first point of contact \
+  #     with customers on LATAM Mexico Region, managing the invoicing and billing of the application."
+  #   Activities:
+  #     - Front / Back End Development
+  #     - Business Operations in México
+  #     - Sales and Billing in México
+  # - Company: ViralConnections
+  #   Title: Cloud Architect Adviser / DevOps / Full Stack
+  #   Type: Consultor
+  #   Start: 2017-02-01
+  #   End: 2019-10-01
+  #   Location: Panama City, Pan, PAN
+  #   Description: "Working in a Marketing Company for LATAM and US, my roles was to advice in Cloud Technologies \
+  #     such as Amazon Web Services (AWS) and managing all the main projects for the business, deployment and \
+  #     maintenance. Leading and Coordinating the work with diferent developers accross north, central and \
+  #     south america for Projects for multiple work business areas like Accounting, Marine services, Real \
+  #     Estates and others."
+  #   Activities:
+  #     - AWS Adviser
+  #     - Migrations
+  #     - Project Adviser
+  #     - Full Stack Developer
+  # - Company: Antigravity Media
+  #   Title: Sys Engineer / DevOps / Full Stack Dev
+  #   Start: 2016-07-01
+  #   End: 2019-01-01
+  #   Type: Full Time
+  #   Location: Seatle, Was, USA
+  #   Description: "Handle infrastructure in the cloud, Unix/Linux environments AMI Linux, Ubuntu, CentOS, \
+  #     databases as MySQL, PostgreSQL and cloud storage S3 buckets, load balancing, monitoring using Amazon \
+  #     CloudWatch resources such disk space, CPU utilization and network, troubleshooting and maintenance of \
+  #     the servers. Infrastructure as a Service (IaaS) and Infrastructure as Code (IaC) working with Ruby, \
+  #     Chef, Jenkins, Code Ship and AWS Ops Works. Full Stack Developer for applications using primary \
+  #     languages Ruby on Rails, PHP, JavaScript, team lead of 3 developers in US and Mexico, supporting \
+  #     coordination between customers and dev team, work on enhancements, features and bug fixes, root cause \
+  #     analysis, post mortem reports, debug and diagnostics. Containerization and Virtualization using tools \
+  #     like Docker, Virtual Box and Vagrant."
+  #   Activities:
+  #     - Infrastructure Engineer
+  #     - Sys Admin
+  #     - Full Stack Developer
+  #     - Team Lead
+  #     - DevOps
+  - Company: Tata Consultancy Services (TCS)
+    Title: Team Lead/L3 Support
+    Type: Full Time
+    Start: 2012-01-01
+    End: 2016-07-01
+    Location: Guadalajara, Jal, MEX
+    Description: "Kaiser Permanente - is a leading integrated healthcare organization in the United States. It combines health care services and insurance coverage into a single entity, serving over 12.5 million members. The organization operates a coordinated care model with a focus on preventive health, chronic disease management, and specialized care quality. "
+    Activities:
+      - Maintaining and supporting infrastructure to ensure optimal functionality and reliability.
+      - Developing and managing Remedy solutions to meet organizational needs.
+      - Administering Remedy platforms to optimize performance and resolve issues.
+      - Conducting regular health checks to assess system performance and identify potential risks.
+      - Performing root cause analysis to diagnose and prevent recurring issues.
+      - Implementing proactive infrastructure maintenance strategies and monitoring.
+      - Designing and deploying custom Remedy applications and workflows.
+      - Managing upgrades and patches for Remedy systems to ensure security and efficiency.
+      - Documenting findings from health checks and root cause analyses for future improvements.
+      - Collaborating with teams to address infrastructure and application challenges effectively.
+    Technologies:
+      - Bash
+      - BMC Remedy
+      - IBM
+      - ITSM
+      - Java
+      - JavaScript
+      - Linux
+      - Perl
+      - ServiceNow
+      - Unix
+      - Websphere
+  # - Company: Kaiser Permanente @ TCS
+  #   Title: BMC L3 Infra Support
+  #   Type: Full Time
+  #   Start: 2016-01-01
+  #   End: 2016-07-01
+  #   Location: Guadalajara, Jal, MEX
+  #   Description: "Trained in ITIL v3 and ITSM tools, especially in change management, in order to use BMC \
+  #     Remedy application for support over IBM AIX and Linux environments. Support for Dev teams within the \
+  #     company creating new modules for BMC. Maintenance and troubleshooting in the infrastructure and the \
+  #     BMC application. Review and maintain the queries for transaction in the Oracle Databases. Check \
+  #     availability of the nodes automatically and manually on daily basis. Debugging, diagnosing and work on \
+  #     root cause analysis whenever incidents arise. Work in a team with 8 team members, 1 on site, 2 nearshore \
+  #     and 5 offshore, always rotating any workload or issues that require continue attention. Involve in the \
+  #     process of the application into PaaS and working with the DevOps culture and practices."
+  #   Activities:
+  #     - Infrastructure Engineer
+  #     - Sys Admin
+  #     - WebSphere Monitoring Nodes
+  #     - Back End Developer
+  #     - Crisis Management
+  #     - First Point of Contact on Incidents
+  # - Company: AT&T @ Amdocs @ TCS
+  #   Title: L2 Billing Support / Team Lead
+  #   Type: Full Time
+  #   Start: 2012-01-01
+  #   End: 2016-01-01
+  #   Location: Guadalajara, Jal, MEX
+  #   Description: "Project lead for all the Level 2 team members in nearshore production operations. \
+  #     Performing deployment task related to the billing application by AT&T. Create scripts to \
+  #     retrieve information from logs, monitoring the main billing application, maintenance on the data \
+  #     servers such compressing and cleaning logs, troubleshooting issues, querying SQL string using oracle \
+  #     databases. Ensure the business continuity of the billing process in the production environments \
+  #     working on schedule periods of on-call person and working on schedule maintenances. Introduced in the \
+  #     DevOps culture with the use of Repositories and version control and working with continuous deployment \
+  #     (CD) in the initial stages."
+  #   Activities:
+  #     - Team Lead
+  #     - On Call Support
+  #     - WebLogic deployment WAR files
+  #     - Schedule Maintenance Task Executor
+  #     - Application Support
+  - Company: Telecomunicaciones y Softwares
+    Title: Web Developer Senior
+    Type: Full Time
+    Start: 2010-01-01
+    End: 2011-10-01
+    Location: Puerto Vallarta, Jal, MEX
+    Description: "Telecomunicaciones y Softwares - a telecommunications and software development company specializing in providing IT solutions for businesses. The company offers a wide range of services, including web development, software design, and network administration."
+    Activities:
+      - Developed and maintained web applications using PHP, JavaScript, and MySQL, ensuring high performance and user experience.
+      - Designed and implemented RESTful APIs to enable seamless communication between applications and systems.
+      - Managed database administration tasks, including data modeling, query optimization, and performance tuning.
+      - Conducted code reviews and testing to ensure high code quality and adherence to best practices.
+    Technologies:
+      - Apache
+      - Backend Development
+      - JavaScript
+      - MySQL
+      - PHP
+      - RESTful
+      - SQL
+  - Company: Seguro Popular México (Gob Institution)
+    Title: Brigade Lead / Data Capture
+    Type: Eventual
+    Start: 2009-12-01
+    End: 2010-01-01
+    Location: Tepic, Nay, MEX
+    Description: "Coordinator in a small team of 4 members, our primary task was to travel to hard reach access locations and install temporary tents to register people into the social security system for statistics and delivery proper health plan in those locations. I was in charge of a pick- up truck, 4 laptops, finger print scanners, printers and safety personal. On every place we arrive I reached the local authority to coordinate the campaign."
+    Activities:
+      - Safety of the team members
+      - Coordinate with the local authorities
+      - Drive and settle on the next town
+    Technologies:
+      - Data Capture
+      - Health Plan
+      - Social Security
+      - Statistics
+      - Temporary Tents
+      - Travel
+Certification:
+  - Name: "AWS Knownledge: Amazon EKS"
+    Institution: "AWS Training & Certifications"
+    Year: 2025
+  - Name: TypeScript
+    Institution: Udemy
+    Year: 2024
+  - Name: Stripe Certified Associate Developer
+    Institution: Stripe
+    Year: 2023
+  - Name: The Complete GitHub Actions & Workflows Guide
+    Institution: Udemy
+    Year: 2023
+  - Name: HashiCorp Certified Terraform Associate 2023
+    Institution: Udemy
+    Year: 2023
+  - Name: AWS Cloud Practitioner Certification
+    Institution: AWS Training & Certifications
+    Year: 2022
+  - Name: Puppet
+    Institution: Udemy
+    Year: 2020
+  - Name: Amazon AWS Arquitecto de Soluciones
+    Institution: Udemy
+    Year: 2019
+  - Name: Docker
+    Institution: Udemy
+    Year: 2019
+  - Name: Python
+    Institution: Udemy
+    Year: 2019
+  - Name: Lean / Six Sigma Green Belt
+    Institution: Tata Consultancy Services
+    Year: 2015
+  - Name: Solution Thinking for Breakthrough Decision
+    Institution: Tata Consultancy Services
+    Year: 2015
+  - Name: Decision Analysis and Resolution (DAR) Technics
+    Institution: Tata Consultancy Services
+    Year: 2015
+  - Name: ITIL 2011 Foundation
+    Institution: Tata Consultancy Services
+    Year: 2015
+  - Name: Political and Ideological Training
+    Institution: Universidad de Guadalajara
+    Year: 2006
+Recognition:
+  - Name: Spot Award for Performance
+    Institution: FICO
+    Year: 2023
+  - Name: Spot Award for Performance
+    Institution: FICO
+    Year: 2022
+  - Name: Spot Award for Performance
+    Institution: FICO
+    Year: 2022
+  - Name: Spot Award for Performance
+    Institution: FICO
+    Year: 2021
+  - Name: Service and Commitment Award
+    Institution: Tata Consultancy Services
+    Year: 2015
+  - Name: AMDOCS Certificate of Excellence
+    Institution: AMDOCS
+    Year: 2014
+  - Name: International Citizen of Excellence
+    Institution: Ibero-American Council of Education
+    Year: 2006
+  - Name: Diploma of Participation
+    Institution: Ibero-American Council of Education
+    Year: 2006
+  - Name: Ambassador of San Luis
+    Institution: Municipality of San Luis in Lima Perú
+    Year: 2006
+  - Name: Honorable Merits
+    Institution: Lion Clubs International in Lima Perú
+    Year: 2006
+Education:
+  - Name: Bachelor Degree Engineer in Telematics
+    Institution: Universidad de Guadalajara
+    Location: Puerto Vallarta, JAL, México
+    Year: 2009

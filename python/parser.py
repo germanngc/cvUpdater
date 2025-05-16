@@ -56,6 +56,10 @@ class PDF(FPDF):
 		else:
 			return str(num_months) + ' ' + monthPloural
 
+	def setMarker(self):
+		xMarker = 70 if self.page_no() == 1 else 5
+
+
 	def customvars(self):
 		self.Information = cvData.get('Information', [])
 		self.AboutMe = self.Information.get('AboutMe', [])
@@ -128,7 +132,7 @@ class PDF(FPDF):
 		cellSizeSep = math.ceil((cellSizePhone + cellSizeEmail + cellSizeLocation + 16) / 2)
 
 		self.cell(cellSizeSep, 6, '', 0, 0, 'L', 0)
-		self.set_x(getX + cellSizeSep)
+		self.set_x(cellSizeSep)
 
 		getX = self.get_x()
 
@@ -175,15 +179,15 @@ class PDF(FPDF):
 		self.leftColBlock(self.Languages, 'LANGUAGES', 'table')
 
 		# Social Block
-		self.leftColBlock(self.Social, 'SOCIAL', 'table')
+		self.leftColBlock(self.Social, 'SOCIAL', 'table', False, True)
 
 		# Technologies Block
-		# self.leftColBlock(self.Technologies, 'TECHNOLOGIES', 'inline')
+		self.leftColBlock(self.Technologies, 'TECH STACK', 'inline', True)
 
 		# Skills Block
-		self.leftColBlock(self.Skills, 'SKILLS', 'inline')
+		# self.leftColBlock(self.Skills, 'SKILLS', 'inline')
 
-	def leftColBlock(self, data, blockName = 'Missing', layout = 'table'):
+	def leftColBlock(self, data, blockName = 'Missing', layout = 'table', bread_crumbs = False, link = False):
 		self.set_x(5)
 		self.set_font('OpenSansBold', '', 12)
 		self.set_text_color(self.template_color['text'][0], self.template_color['text'][1], self.template_color['text'][2])
@@ -195,15 +199,22 @@ class PDF(FPDF):
 			for item in data:
 				self.set_x(5)
 				self.set_font('OpenSansBold', '', 10)
-				labelName = str(item) + ': '
-				labelWidth = math.ceil(self.get_string_width(labelName))
-				self.cell(labelWidth, 5, labelName, 0, 0, 'L')
-				self.set_font('OpenSans', '', 10)
-				# self.cell(60 - labelWidth, 5, str(data[item]), 0, 1, 'L')
-				self.multi_cell(60 - labelWidth, 5, str(data[item]), 0, 'L')
+				labelName = str(item)
+				linkToSet = ""
+
+				if link == False:
+					labelName = labelName + ': '
+					labelWidth = math.ceil(self.get_string_width(labelName))
+					self.cell(labelWidth, 5, labelName, 0, 0 if link == False else 1, 'L', False, linkToSet)
+					self.set_font('OpenSans', '', 10)
+					self.multi_cell(60 - labelWidth, 5, str(data[item]), 0, 'L')
+				else:
+					self.set_font('OpenSans', '', 10)
+					self.write(5, str(data[item]), str(data[item]))
+					self.ln()
 		else:
 			self.set_x(5)
-			self.set_font('OpenSans', '', 10)
+			self.set_font('OpenSans', '', 10 if bread_crumbs == True else 7)
 			self.multi_cell(60, 5, " / ".join(data), 0, 'J')
 
 		self.ln(5)
@@ -216,58 +227,70 @@ class PDF(FPDF):
 		self.set_font('OpenSansBold', '', 16)
 		self.set_text_color(self.template_color['text'][0], self.template_color['text'][1], self.template_color['text'][2])
 
-		if (self.get_y() + 8 + 8) > 250:
+		if (self.get_y() + 8 + 8) > 255:
 			self.add_page()
 			self.set_x(xMarker)
 
+		xMarker = 70 if self.page_no() == 1 else 5
 		self.set_x(xMarker)
 		self.set_font('OpenSansBold', '', 16)
-		self.cell(140 + (reversedXMarker + 5), 8, "Profile", 0, 1, 'L', 0)
+		self.cell(140 + (reversedXMarker + 5), 8, "Summary", 0, 1, 'L', 0)
 
+		xMarker = 70 if self.page_no() == 1 else 5
 		self.set_x(xMarker)
 		self.set_font('OpenSansLight', '', 10)
 		self.multi_cell(140 + (reversedXMarker - 5), 6, str(self.Summary), 0, 'J')
 		self.ln()
 
-		# Chart =  self.Information.get('Chart', [])
-		# Chart2 =  self.Information.get('ChartSkills', [])
-		# chartType = Chart.get('Type', False)
-		# chartType2 = Chart2.get('Type', False)
-		# chartLabels = Chart.get('Labels', [])
-		# chartLabels2 = Chart2.get('Labels', [])
-		# chartValues = Chart.get('Values', [])
-		# chartValues2 = Chart2.get('Values', [])
-
-		# if chartType is not False and chartType2 is not False:
-		# 	chart = radar_chart(chartLabels, chartValues, self.template_color['background'])
-		# 	time.sleep(1)
-		# 	chart2 = radar_chart(chartLabels2, chartValues2, self.template_color['background'])
-
-		# 	tmp_width = ((140 + (reversedXMarker - 5)) - 130) / 2
-
-		# 	self.set_x(xMarker)
-		# 	self.set_font('OpenSansBold', '', 14)
-		# 	self.cell(70 + ((reversedXMarker - 5) / 2), 4, str("Year in Positions"), 0, 0, 'C')
-		# 	self.cell(70 + ((reversedXMarker - 5) / 2), 4, str("Years in Skill"), 0, 0, 'C')
-		# 	self.ln(6)
-
-		# 	pdf.image(chart, x=(xMarker + tmp_width), y=self.get_y(), w=60, h=60)
-		# 	pdf.image(chart2, x=(xMarker + tmp_width + 70), y=self.get_y(), w=60, h=60)
-
-		# 	self.ln(60)
-		# 	os.remove(chart)
-		# 	os.remove(chart2)
-
+		xMarker = 70 if self.page_no() == 1 else 5
 		self.set_x(xMarker)
 		self.set_font('OpenSansBold', '', 16)
-		self.cell(140 + (reversedXMarker + 5), 8, 'Tools and Technologies', 0, 1, 'L', 0)
+		self.cell(140 + (reversedXMarker + 5), 8, 'Skills', 0, 1, 'L', 0)
 		self.ln(2)
 
-		self.set_x(xMarker)
-		self.set_font('OpenSansLight', '', 10)
-		self.multi_cell(140 + (reversedXMarker - 5), 6, " / ".join(self.Technologies), 0, 'J')
-		self.ln(8)
+		for item in self.Skills:
+			xMarker = 70 if self.page_no() == 1 else 5
+			self.set_x(xMarker)
+			self.set_font('OpenSansBold', '', 10)
+			self.cell(140 + (reversedXMarker + 5), 6, str(item['name'] + ': '), 0, 1, 'L', 1)
+			xMarker = 70 if self.page_no() == 1 else 5
+			self.set_x(xMarker)
+			self.set_font('OpenSansLight', '', 10)
+			self.multi_cell(140 + (reversedXMarker - 5), 6, str(item['skill']), 0, 'L')
+			self.ln(1)
 
+		self.ln(7)
+
+		xMarker = 70 if self.page_no() == 1 else 5
+		self.set_x(xMarker)
+		self.set_font('OpenSansBold', '', 16)
+		self.cell(140 + (reversedXMarker + 5), 8, 'Education', 0, 1, 'L', 0)
+		self.ln(2)
+
+		for item in self.Education:
+			institution = item.get('Institution', 'Unknown')
+			location = item.get('Location', 'Unknown')
+			name = item.get('Name', 'Unknown')
+			year = item.get('Year', 'Unknown')
+			reversedXMarker = 5 if self.page_no() == 1 else 70
+
+			xMarker = 70 if self.page_no() == 1 else 5
+			self.set_x(xMarker)
+			self.set_font('OpenSansBold', '', 10)
+			self.cell(130 + (reversedXMarker - 5), 4, str(name), 0, 1, 'L')
+			self.ln(1)
+
+			xMarker = 70 if self.page_no() == 1 else 5
+			self.set_x(xMarker)
+			self.set_font('OpenSans', '', 10)
+			self.cell(130 + (reversedXMarker - 5), 4, str(institution + ' / ' + location + ' / ') + str(year), 0, 1, 'L')
+			self.ln(1)
+
+		self.ln(7)
+
+		self.add_page()
+
+		xMarker = 70 if self.page_no() == 1 else 5
 		self.set_x(xMarker)
 		self.set_font('OpenSansBold', '', 16)
 		self.cell(140 + (reversedXMarker + 5), 8, 'Employment History', 0, 1, 'L', 0)
@@ -275,6 +298,7 @@ class PDF(FPDF):
 
 		for item in self.Job:
 			activities = item.get('Activities', [])
+			technologies = item.get('Technologies', [])
 			company = item.get('Company', 'Unknown')
 			description = item.get('Description', 'Unknown')
 			end = item.get('End', date.today())
@@ -312,6 +336,8 @@ class PDF(FPDF):
 			except TypeError:
 				start = date.today()
 
+			xMarker = 70 if self.page_no() == 1 else 5
+			reversedXMarker = 5 if self.page_no() == 1 else 70
 			self.set_x(xMarker)
 			self.set_font('OpenSansBold', '', 10)
 			self.cell(52 + ((reversedXMarker - 5) / 3), 4, str(title), 0, 0, 'L')
@@ -319,24 +345,68 @@ class PDF(FPDF):
 			self.cell(35 + ((reversedXMarker - 5) / 3), 4, str(''), 0, 0, 'C')
 			self.cell(52 + ((reversedXMarker - 5) / 3), 4, str(company), 0, 1, 'R')
 			self.ln(2)
+			xMarker = 70 if self.page_no() == 1 else 5
+			reversedXMarker = 5 if self.page_no() == 1 else 70
 			self.set_x(xMarker)
 			self.set_font('OpenSans', '', 10)
 			# self.cell(100 + (reversedXMarker - 5), 6, str(location + '   /   From ' + start.strftime("%B/%Y") + ' to ' + end_string), 'B', 0, 'L')
 			self.cell(100 + (reversedXMarker - 5), 6, str(start.strftime("%b %Y") + ' -- ' + end_string), 'B', 0, 'L')
 			self.cell(40, 6, self.getJobAge(start, end), 'B', 1, 'R')
 			self.ln(2)
+
+			if self.get_y() > 255:
+				self.add_page()
+
+			xMarker = 70 if self.page_no() == 1 else 5
+			reversedXMarker = 5 if self.page_no() == 1 else 70
 			self.set_x(xMarker)
 			self.set_font('OpenSansLight', '', 10)
 			self.multi_cell(140 + (reversedXMarker - 5), 6, str(description), 0, 'J')
-			## self.ln(6)
-			# self.set_x(xMarker)
-			# self.set_font('OpenSans', '', 10)
-			# self.cell(15, 6, str('Activities: '), 0, 0, 'L')
-			# self.set_font('OpenSansLight', '', 10)
-			# self.multi_cell(115 + (reversedXMarker - 5), 6, " / ".join(activities), 0, 'J')
-			self.ln(8)
+			
+			if self.get_y() > 255:
+				self.add_page()
+			
+			xMarker = 70 if self.page_no() == 1 else 5
+			reversedXMarker = 5 if self.page_no() == 1 else 70
+			self.set_x(xMarker)
+			self.set_font('OpenSans', '', 10)
+			self.ln(2)
 
-			if self.get_y() > 250:
+			if self.get_y() > 255:
+				self.add_page()
+
+			xMarker = 70 if self.page_no() == 1 else 5
+			reversedXMarker = 5 if self.page_no() == 1 else 70
+			self.set_x(xMarker)
+			self.cell(15, 6, str('Activities and Responsabilities: '), 0, 0, 'L')
+			self.ln()
+
+			for item in activities:
+				if self.get_y() > 255:
+					self.add_page()
+
+				xMarker = 70 if self.page_no() == 1 else 5
+				reversedXMarker = 5 if self.page_no() == 1 else 70
+				self.set_x(xMarker + 5)
+				self.set_font('OpenSansLight', '', 10)
+				self.multi_cell(115 + (reversedXMarker - 5), 6, str("• " + item), 0, 'J')
+
+			self.ln(2)
+
+			if self.get_y() > 255:
+				self.add_page()
+
+			xMarker = 70 if self.page_no() == 1 else 5
+			reversedXMarker = 5 if self.page_no() == 1 else 70
+			self.set_x(xMarker)
+			self.set_font('OpenSans', '', 10)
+			self.cell(18, 6, str('Technologies: '), 0, 0, 'L')
+			self.set_font('OpenSansLight', '', 10)
+			self.multi_cell(117 + (reversedXMarker - 5), 6, ", ".join(technologies) + ".", 0, 'J')
+
+			self.ln(13)
+
+			if self.get_y() > 255:
 				self.add_page()
 
 		xMarker = 70 if self.page_no() == 1 else 5
@@ -347,7 +417,7 @@ class PDF(FPDF):
 		self.set_font('OpenSansBold', '', 16)
 		self.set_text_color(self.template_color['text'][0], self.template_color['text'][1], self.template_color['text'][2])
 
-		if (self.get_y() + 8 + 8) > 250:
+		if (self.get_y() + 8 + 8) > 255:
 			self.add_page()
 			self.set_x(xMarker)
 
@@ -366,7 +436,7 @@ class PDF(FPDF):
 
 		anchorY = self.get_y()
 
-		if anchorY > 250:
+		if anchorY > 255:
 			self.add_page()
 			anchorY = 11
 
@@ -381,12 +451,12 @@ class PDF(FPDF):
 			self.set_xy(xMarker, anchorY)
 			self.multi_cell(55 + ((reversedXMarker - 5) / 2), 4, str(name), 0, 'L')
 			#highY = highY if highY > self.get_y() else self.get_y()
-			#highY = highY if highY > 250 else -15
+			#highY = highY if highY > 255 else -15
 
 			self.set_xy(xMarker + 55 + ((reversedXMarker - 5) / 2), anchorY)
 			self.multi_cell(55 + ((reversedXMarker - 5) / 2), 4, str(institution), 0, 'L')
 			# highY = highY if highY > self.get_y() else self.get_y()
-			# highY = highY if highY > 250 else -15
+			# highY = highY if highY > 255 else -15
 
 			self.set_xy(xMarker + 55 + 55 + ((reversedXMarker - 5) / 2) + ((reversedXMarker - 5) / 2), anchorY)
 			self.multi_cell(20, 4, str(year), 0, 'L')
@@ -394,7 +464,7 @@ class PDF(FPDF):
 
 			anchorY = self.get_y()
 
-			if anchorY > 250:
+			if anchorY > 255:
 				self.add_page()
 				anchorY = 11
 
@@ -409,7 +479,7 @@ class PDF(FPDF):
 		self.set_font('OpenSansBold', '', 16)
 		self.set_text_color(self.template_color['text'][0], self.template_color['text'][1], self.template_color['text'][2])
 
-		if (self.get_y() + 8 + 8) > 250:
+		if (self.get_y() + 8 + 8) > 255:
 			self.add_page()
 			self.set_x(xMarker)
 
@@ -446,7 +516,7 @@ class PDF(FPDF):
 			self.multi_cell(20, 4, str(year), 0, 'L')
 			highY = highY if highY > self.get_y() else self.get_y()
 
-			if highY > 250:
+			if highY > 255:
 				self.add_page()
 				highY = 11
 
@@ -461,30 +531,30 @@ class PDF(FPDF):
 		self.set_font('OpenSansBold', '', 16)
 		self.set_text_color(self.template_color['text'][0], self.template_color['text'][1], self.template_color['text'][2])
 
-		if (self.get_y() + 8 + 8) > 250:
+		if (self.get_y() + 8 + 8) > 255:
 			self.add_page()
 			self.set_x(xMarker)
 
-		self.cell(130 + (reversedXMarker - 5), 8, 'Education', 0, 1, 'L', 0)
-		self.ln(8)
-		self.set_font('OpenSans', '', 10)
+		# self.cell(130 + (reversedXMarker - 5), 8, 'Education', 0, 1, 'L', 0)
+		# self.ln(8)
+		# self.set_font('OpenSans', '', 10)
 
-		for item in self.Education:
-			institution = item.get('Institution', 'Unknown')
-			location = item.get('Location', 'Unknown')
-			name = item.get('Name', 'Unknown')
-			year = item.get('Year', 'Unknown')
-			xMarker = 70 if self.page_no() == 1 else 5
-			reversedXMarker = 5 if self.page_no() == 1 else 70
+		# for item in self.Education:
+		# 	institution = item.get('Institution', 'Unknown')
+		# 	location = item.get('Location', 'Unknown')
+		# 	name = item.get('Name', 'Unknown')
+		# 	year = item.get('Year', 'Unknown')
+		# 	xMarker = 70 if self.page_no() == 1 else 5
+		# 	reversedXMarker = 5 if self.page_no() == 1 else 70
 
-			self.set_x(xMarker)
-			self.set_font('OpenSansBold', '', 10)
-			self.cell(130 + (reversedXMarker - 5), 4, str(name), 0, 1, 'L')
+		# 	self.set_x(xMarker)
+		# 	self.set_font('OpenSansBold', '', 10)
+		# 	self.cell(130 + (reversedXMarker - 5), 4, str(name), 0, 1, 'L')
 
-			self.set_x(xMarker)
-			self.set_font('OpenSans', '', 10)
-			self.cell(130 + (reversedXMarker - 5), 4, str(institution + ' / ' + location + ' / ') + str(year), 0, 1, 'L')
-			self.ln(1)
+		# 	self.set_x(xMarker)
+		# 	self.set_font('OpenSans', '', 10)
+		# 	self.cell(130 + (reversedXMarker - 5), 4, str(institution + ' / ' + location + ' / ') + str(year), 0, 1, 'L')
+		# 	self.ln(1)
 
 	def separatorA(self, x):
 		self.set_draw_color(self.template_color['lines'][0], self.template_color['lines'][1], self.template_color['lines'][2])

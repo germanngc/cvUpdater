@@ -4,10 +4,14 @@ Information:
   Phone: +52 33 1072 3661
   RoleName: Platform Architect
   Email: germanngc@gmail.com
-  Location: Zapopan, Jalisco, MEX.
-  Summary: "I'm an experience engineer with more than 14 years on the IT field, focused now days on Cloud Infrastructure and CI/CD, with a full and strong background on development, \
-    specially on web applications and shell scripting. I'm a team player, always looking for the best solution for the problem, and always looking for the best way to do things. \
-    I'm a fast learner, and I'm always looking for new challenges."
+  Location: Guadalajara, Jalisco, MEX.
+  Summary: "Experienced professional in DevOps and software development with a strong focus on automation, security, and cloud \
+    infrastructure with over 15 years of experience. Expertise includes implementing end-to-end CI/CD workflows, enhancing \
+    application security, and optimizing deployment pipelines. Proficient in managing multidisciplinary projects, supporting \
+    both on-premise and cloud environments (AWS), and leveraging a wide range of tools and methodologies to streamline \
+    processes. Skilled in planning, delivering, and maintaining scalable solutions, with hands-on experience in API \
+    development, infrastructure advisory, and business operations. Demonstrated success in integrating security practices, \
+    driving innovation, and delivering high-quality technical solutions in dynamic and collaborative environments."
   AboutMe:
     # Birthday: Jun/22/1987
     Location: Zapopan, Jalisco, MEX.
@@ -24,7 +28,21 @@ Information:
   Social:
     LinkedIn: https://linkedin.com/in/germanngc
     GitHub: https://github.com/germanngc
+    Credly: https://www.credly.com/users/germanngc
   Skills:
+    - name: "Programming Languages and Frameworks"
+      skill: "PHP, JavaScript, TypeScript, Python, SQL, Angular, NodeJS."
+    - name: "CI/CD & DevOps"
+      skill: "Jenkins, GitHub Actions, Bitbucket Pipelines, GitLab CI/CD, Terraform, Docker, Kubernetes, Ansible, Puppet, Artifactory, Jfrog, Helm, YAML, Okta, Openssl, Monitoring."
+    - name: "Cloud Platforms"
+      skill: "Amazon Web Services (AWS)."
+    - name: "OS & WebServers"
+      skill: "Windows, Linux, Mac, IIS, Apache, Nginx."
+    - name: "Security Tools"
+      skill: "Blackduck, SonarQube, Checkmarx."
+    - name: "DBMS"
+      skill: "MySQL, Oracle, SQLite, PostgreSQL, MSSQL, MongoDB, DynamoDB."
+  SkillsOld:
     - Agile methodologies
     - Architecture Descision Records (ADR)
     - Backend developer
@@ -173,6 +191,18 @@ Job:
       goals. Using multiple stack and tools from Infrastructure and Software Development. Focused but no limited \
       to Architecture, DevOps, Cloud, CI/CD, Security, Networking, Automation, Scripting, Connectors, API, Software \
       implementations, Mangement, Training, Documentation including ADRs, and others."
+    Activities:
+      - Working on diverse freelance projects of varying complexity and maturity.
+      - Regularly collaborated with clients to design scalable solutions on AWS, utilizing EKS, S3, and Lambda.
+      - Focusing on DevOps practices, including continuous integration/continuous deployment (CI/CD) using languages like Groovy and YAML.
+      - Designing and managing cloud-based solutions for scalability and reliability.
+      - Implementing robust security measures and ensuring secure networking practices.
+      - Wrote automation scripts using Python and Bash, reducing manual workload and increasing deployment efficiency.
+      - Creating connectors and APIs to enable seamless integration between systems.
+      - Providing end-to-end software implementation services tailored to client needs.
+      - Monitored serverless application performance using Datadog, ensuring uptime and quick issue resolution for client projects.
+      - Configured and maintained GitHub Actions workflows for seamless integration and deployment, reducing build errors by 20%.
+      - Created and managed deployment templates in Helm, streamlining CI/CD pipelines for Kubernetes applications.
   - Company: FICO
     Title: Sr DevOps Enablement Engineer
     Type: Full Time
@@ -407,6 +437,9 @@ Job:
       - Coordinate with the local authorities
       - Drive and settle on the next town
 Certification:
+  - Name: "AWS Knownledge: Amazon EKS"
+    Institution: "AWS Training & Certifications"
+    Year: 2025
   - Name: TypeScript
     Institution: Udemy
     Year: 2024
